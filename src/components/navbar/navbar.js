@@ -115,7 +115,10 @@ const Navbar = (props) => {
                     <ul className="first-row">
                       {subCategories &&
                         subCategories.map((s, i) =>
-                          i <= 5 && s.mainCategory._id === m._id ? (
+                          i <= 5 &&
+                          s.mainCategory._id &&
+                          s.mainCategory._id === m._id &&
+                          m._id ? (
                             <>
                               <Link to={s.subCategory_slug}>
                                 <li>{s.subCategory_name}</li>
