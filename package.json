@@ -1,6 +1,7 @@
 {
-  "name": "romo",
+  "name": "omo",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.1",
