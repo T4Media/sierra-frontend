@@ -113,28 +113,30 @@ const Navbar = (props) => {
                       {m.category_name}
                     </Link>
                     <ul className="first-row">
-                      {subCategories.map((s, i) =>
-                        i <= 5 && s.mainCategory._id === m._id ? (
-                          <>
+                      {subCategories &&
+                        subCategories.map((s, i) =>
+                          i <= 5 && s.mainCategory._id === m._id ? (
+                            <>
+                              <Link to={s.subCategory_slug}>
+                                <li>{s.subCategory_name}</li>
+                              </Link>
+                            </>
+                          ) : (
+                            ""
+                          )
+                        )}
+                    </ul>
+                    <ul className="second-row">
+                      {subCategories &&
+                        subCategories.map((s, i) =>
+                          i > 5 && s.mainCategory._id === m._id ? (
                             <Link to={s.subCategory_slug}>
                               <li>{s.subCategory_name}</li>
                             </Link>
-                          </>
-                        ) : (
-                          ""
-                        )
-                      )}
-                    </ul>
-                    <ul className="second-row">
-                      {subCategories.map((s, i) =>
-                        i > 5 && s.mainCategory._id === m._id ? (
-                          <Link to={s.subCategory_slug}>
-                            <li>{s.subCategory_name}</li>
-                          </Link>
-                        ) : (
-                          <></>
-                        )
-                      )}
+                          ) : (
+                            <></>
+                          )
+                        )}
                     </ul>
                   </li>
                 ) : (
@@ -143,17 +145,18 @@ const Navbar = (props) => {
                       {m.category_name}
                     </Link>
                     <ul>
-                      {subCategories.map((s, i) =>
-                        s.mainCategory._id === m._id ? (
-                          <>
-                            <Link to={s.subCategory_slug}>
-                              <li>{s.subCategory_name}</li>
-                            </Link>
-                          </>
-                        ) : (
-                          ""
-                        )
-                      )}
+                      {subCategories &&
+                        subCategories.map((s, i) =>
+                          s.mainCategory._id === m._id ? (
+                            <>
+                              <Link to={s.subCategory_slug}>
+                                <li>{s.subCategory_name}</li>
+                              </Link>
+                            </>
+                          ) : (
+                            ""
+                          )
+                        )}
                     </ul>
                   </li>
                 )
