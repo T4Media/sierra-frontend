@@ -81,8 +81,8 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>
-          © 2021 Exclusive Fabrics | 440 Boulder Court, Suite 100, Pleasanton,
-          CA 94566
+          © 2022 Sierra Textile | B-75/280, Sector A, Street # 3, Kashmir
+          Colony, Karachi, Sindh, Pakistan.
         </p>
 
         <ul>

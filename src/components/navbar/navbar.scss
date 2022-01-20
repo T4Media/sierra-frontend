@@ -27,6 +27,18 @@
   );
 }
 
+.nav-bar .menus .where-to-buy li {
+  margin: 0px 45px !important;
+  width: max-content;
+  position: relative;
+  cursor: pointer;
+  top: 32%;
+
+  ul {
+    margin: 8px -85px !important;
+  }
+}
+
 .nav-bar {
   border-bottom: none;
   position: absolute;
@@ -44,9 +56,9 @@
     left: 0%;
 
     .product-names,
-    .where-to-buy,
     .brand-names,
     .be-inspried,
+    .where-to-buy,
     .company {
       justify-content: center;
       position: relative;
@@ -176,6 +188,7 @@
       text-align: center;
       line-height: 32px;
       text-align: -webkit-center;
+      height: 75px;
     }
     .show-be-inspried {
       display: flex;

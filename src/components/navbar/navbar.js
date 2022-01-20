@@ -79,7 +79,7 @@ const Navbar = (props) => {
     setBrand("");
     setCompany("");
     setBeInspried("");
-    setHeight("20rem");
+    setHeight("25rem");
   };
 
   const dontShowWhereToBuy = () => {
@@ -164,36 +164,51 @@ const Navbar = (props) => {
           </ul>
 
           <ul className={"where-to-buy " + whereToBuy} id="product-names">
-            <Link>
-              <li
-                style={{
-                  fontSize: 17,
-                  fontFamily: "Noah Grotesque Regular",
-                }}
-              >
-                Sourcing and Product Development
-              </li>
-            </Link>
-            <Link>
-              <li
-                style={{
-                  fontSize: 17,
-                  fontFamily: "Noah Grotesque Regular",
-                }}
-              >
-                Production and Quality Control
-              </li>
-            </Link>
-            <Link>
-              <li
-                style={{
-                  fontSize: 17,
-                  fontFamily: "Noah Grotesque Regular",
-                }}
-              >
-                Merchandising and Documentation
-              </li>
-            </Link>
+            <li className="about-us">
+              <Link> SOURCING AND PRODUCT DEVELOPMENT</Link>
+              <ul>
+                <Link to="/about">
+                  <li>About Exclusive Fabrics</li>
+                </Link>
+
+                <Link to="/leadership">
+                  <li>Leadership</li>
+                </Link>
+
+                <Link to="/facilities">
+                  <li>Facilities</li>
+                </Link>
+              </ul>
+            </li>
+
+            <li className="about-us">
+              <Link> PRODUCTION AND QUALITY CONTROL</Link>
+              <ul>
+                <Link to="/about">
+                  <li>About Exclusive Fabrics</li>
+                </Link>
+
+                <Link to="/leadership">
+                  <li>Leadership</li>
+                </Link>
+              </ul>
+            </li>
+            <li className="about-us">
+              <Link> TEXTILE DESIGN SERVICES</Link>
+              <ul>
+                <Link to="/about">
+                  <li>About Exclusive Fabrics</li>
+                </Link>
+              </ul>
+            </li>
+            <li className="about-us">
+              <Link> DIGITAL MERCHANDIZING SERVICES</Link>
+              <ul>
+                <Link to="/about">
+                  <li>Whatever</li>
+                </Link>
+              </ul>
+            </li>
           </ul>
 
           <ul className={"be-inspried " + beInspried} id="product-names">
