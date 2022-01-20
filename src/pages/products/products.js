@@ -125,7 +125,7 @@ const Products = (props) => {
               elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Sit amet tellus cras adipiscing enim. Ut porttitor leo a
               diam sollicitudin. Turpis in eu mi bibendum neque egestas congue
-              quisque egestas.
+              quisque <s>egestas.</s>
             </p>
 
             <Signin_Signup

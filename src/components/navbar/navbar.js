@@ -79,7 +79,7 @@ const Navbar = (props) => {
     setBrand("");
     setCompany("");
     setBeInspried("");
-    setHeight("25rem");
+    setHeight("20rem");
   };
 
   const dontShowWhereToBuy = () => {
@@ -164,50 +164,18 @@ const Navbar = (props) => {
           </ul>
 
           <ul className={"where-to-buy " + whereToBuy} id="product-names">
-            <li className="about-us">
+            <li>
               <Link> SOURCING AND PRODUCT DEVELOPMENT</Link>
-              <ul>
-                <Link to="/about">
-                  <li>About Exclusive Fabrics</li>
-                </Link>
-
-                <Link to="/leadership">
-                  <li>Leadership</li>
-                </Link>
-
-                <Link to="/facilities">
-                  <li>Facilities</li>
-                </Link>
-              </ul>
             </li>
 
-            <li className="about-us">
+            <li>
               <Link> PRODUCTION AND QUALITY CONTROL</Link>
-              <ul>
-                <Link to="/about">
-                  <li>About Exclusive Fabrics</li>
-                </Link>
-
-                <Link to="/leadership">
-                  <li>Leadership</li>
-                </Link>
-              </ul>
             </li>
-            <li className="about-us">
+            <li>
               <Link> TEXTILE DESIGN SERVICES</Link>
-              <ul>
-                <Link to="/about">
-                  <li>About Exclusive Fabrics</li>
-                </Link>
-              </ul>
             </li>
-            <li className="about-us">
+            <li>
               <Link> DIGITAL MERCHANDIZING SERVICES</Link>
-              <ul>
-                <Link to="/about">
-                  <li>Whatever</li>
-                </Link>
-              </ul>
             </li>
           </ul>
 

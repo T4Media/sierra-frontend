@@ -65,7 +65,7 @@ const Home = (props) => {
       <TopCarousel banner={banner} />
       <InformationPanel />
       <NewsLetterSub />
-      <MoreOptions />
+      {/* <MoreOptions /> */}
       <Footer />
     </div>
   );
