@@ -19,6 +19,8 @@ const Products = (props) => {
   const [products, setProducts] = useState();
   const [spinner, setSpinner] = useState();
   const [currentImage, setCurrentImage] = useState(0);
+  const [subCategory, setSubCategory] = useState(0);
+
   const [token, setToken] = useState();
 
   const [isViewerOpen, setIsViewerOpen] = useState(false);
@@ -65,18 +67,36 @@ const Products = (props) => {
       .then(function (response) {
         setClassNamay("fabric");
         setProducts(response.data);
-        console.log("Check data", response.data);
+
         setSpinner(false);
+
         return axios
           .get(
-            process.env.REACT_APP_AMAZON_SERVER_LINK + "customerAuth/getToken"
+            process.env.REACT_APP_AMAZON_SERVER_LINK + "subCategories/bySlug",
+            {
+              params: {
+                subCategory: location.pathname,
+              },
+            }
           )
           .then(function (response) {
-            if (response.data.token) {
-              cookies.set("eff_customer", response.data.token);
-              dispatch(addToken(response.data.token));
-              setToken(response.data.token);
-            }
+            setSubCategory(response.data);
+
+            return axios
+              .get(
+                process.env.REACT_APP_AMAZON_SERVER_LINK +
+                  "customerAuth/getToken"
+              )
+              .then(function (response) {
+                if (response.data.token) {
+                  cookies.set("eff_customer", response.data.token);
+                  dispatch(addToken(response.data.token));
+                  setToken(response.data.token);
+                }
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
           })
           .catch(function (error) {
             console.log(error);
@@ -86,8 +106,6 @@ const Products = (props) => {
         console.log(error);
       });
   }, [location]);
-
-  console.log("token: ", token);
 
   const getImages = () => {
     var images = [];
@@ -113,9 +131,7 @@ const Products = (props) => {
         <div className="row">
           <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 description">
             <h1 className="sub-category-name">
-              {products &&
-                products[0] &&
-                products[0].subCategory.subCategory_name}
+              {subCategory && subCategory.subCategory_name}
               ..
             </h1>
 
@@ -128,48 +144,51 @@ const Products = (props) => {
               quisque <s>egestas.</s>
             </p>
 
-            <Signin_Signup
-              label="Download Broucher"
-              products={products && products[0]}
-              style={{
-                background: "#d3a657e3",
-                borderRadius: "5px",
-                marginLeft: "15%",
-                color: "white",
-                padding: "2% 3%",
-                boxShadow: "0 2px 10px grey",
-                fontSize: "15px",
-                marginTop: "5%",
-                fontWeight: "400",
-                border: "none",
-              }}
-            />
+            {subCategory && subCategory.pdf ? (
+              <Signin_Signup
+                label="Download Broucher"
+                products={products && products[0]}
+                style={{
+                  background: "#d3a657e3",
+                  borderRadius: "5px",
+                  marginLeft: "15%",
+                  color: "white",
+                  padding: "2% 3%",
+                  boxShadow: "0 2px 10px grey",
+                  fontSize: "15px",
+                  marginTop: "5%",
+                  fontWeight: "400",
+                  border: "none",
+                }}
+              />
+            ) : (
+              ""
+            )}
           </div>
           <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 image">
-            <img
-              src={
-                products &&
-                products[0] &&
-                products[0].subCategory.subCategory_image
-              }
-              alt="life-style"
-            />
+            <img src={subCategory.subCategory_image} alt="life-style" />
           </div>
         </div>
       </div>
-      <div className="container product-carousel">
-        <h1 className="categories">Categories</h1>
-        <center>
-          <News
-            openImageViewer={openImageViewer}
-            data={products}
-            md={md}
-            lg={lg}
-            sm={sm}
-            xs={xs}
-          />
-        </center>
-      </div>
+
+      {products && products.length !== 0 ? (
+        <div className="container product-carousel">
+          <h1 className="categories">Categories</h1>
+          <center>
+            <News
+              openImageViewer={openImageViewer}
+              data={products}
+              md={md}
+              lg={lg}
+              sm={sm}
+              xs={xs}
+            />
+          </center>
+        </div>
+      ) : (
+        ""
+      )}
+
       {isViewerOpen && (
         <ImageViewer
           src={getImages()}

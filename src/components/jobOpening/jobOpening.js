@@ -128,12 +128,7 @@ const JobOpening = () => {
                 <td className="job-type">
                   <span
                     style={{
-                      background:
-                        job.jobType == "Full Time"
-                          ? "#14b1bb"
-                          : job.jobType == "Part Time"
-                          ? "#F15B65"
-                          : "#2D3E50",
+                      background: "#d9b473",
                       padding: "8px 18px",
                       fontFamily: "Raleway",
                       borderRadius: 8,
