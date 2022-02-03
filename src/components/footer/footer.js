@@ -10,6 +10,7 @@ import {
   FaYoutube,
   FaLinkedin,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const { Search } = Input;
 
 const Footer = () => {
@@ -75,7 +76,9 @@ const Footer = () => {
             enterButton="Subcribe"
             size="large"
           />
-          <img src={logo} alt="" style={{ display: "grid" }} />
+          <Link to="/">
+            <img src={logo} alt="" style={{ display: "grid" }} />
+          </Link>
         </div>
       </div>
 

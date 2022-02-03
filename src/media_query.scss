@@ -97,6 +97,19 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .sourcing-and-development .contact-form .container .row .col-xl-6 {
+    input {
+      width: 100% !important;
+    }
+    textarea {
+      width: 100% !important;
+    }
+  }
+
+  .sourcing-and-development .contact-form .container .row .col-xl-6 p {
+    padding-right: 25px !important;
+  }
+
   .facilities .world-team .container .row .col-xl-6 img {
     margin-top: 10rem !important;
   }
@@ -225,6 +238,27 @@
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+  .sourcing-and-development .contact-form .container .row {
+    text-align: -webkit-center;
+
+    .col-xl-6 {
+      margin-top: 3rem;
+      p {
+        padding-right: 0px !important;
+      }
+
+      form {
+        justify-items: center;
+        input {
+          width: 100% !important;
+        }
+        textarea {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
   .facilities .certifications .container .certification-text {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -473,6 +507,27 @@
 }
 
 @media (max-width: 575px) {
+  .sourcing-and-development .contact-form .container .row {
+    text-align: -webkit-center;
+
+    .col-xl-6 {
+      margin-top: 3rem;
+      p {
+        padding-right: 0px !important;
+      }
+
+      form {
+        justify-items: center;
+        input {
+          width: 100% !important;
+        }
+        textarea {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
   .sign-in-container {
     form {
       position: relative !important;

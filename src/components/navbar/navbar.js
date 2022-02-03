@@ -165,17 +165,23 @@ const Navbar = (props) => {
 
           <ul className={"where-to-buy " + whereToBuy} id="product-names">
             <li>
-              <Link> SOURCING AND PRODUCT DEVELOPMENT</Link>
+              <Link to="/sourcing-and-development">
+                SOURCING AND PRODUCT DEVELOPMENT
+              </Link>
             </li>
 
             <li>
-              <Link> PRODUCTION AND QUALITY CONTROL</Link>
+              <Link to="/production-and-quality">
+                PRODUCTION AND QUALITY CONTROL
+              </Link>
             </li>
             <li>
-              <Link> TEXTILE DESIGN SERVICES</Link>
+              <Link to="/textile-design-service"> TEXTILE DESIGN SERVICES</Link>
             </li>
             <li>
-              <Link> DIGITAL MERCHANDIZING SERVICES</Link>
+              <Link to="/digital-merchandising-service">
+                DIGITAL MERCHANDIZING SERVICES
+              </Link>
             </li>
           </ul>
 
