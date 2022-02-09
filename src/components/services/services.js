@@ -1,9 +1,3 @@
-import {
-  MdOutlinePrecisionManufacturing,
-  MdOutlineDesignServices,
-} from "react-icons/md";
-import { GiSharpShuriken } from "react-icons/gi";
-import { BsArrowRightShort } from "react-icons/bs";
 import "./services.scss";
 
 const Services = (props) => {

@@ -5,7 +5,7 @@ const ContactForm = () => {
       <div className="container">
         <div className="row">
           <div className="col-xl-6 col-lg-6 col-md-6">
-            <h1>Our Capabilities</h1>
+            <h1 className="our-capabilities">Our Capabilities</h1>
             <p>
               At Loyal Textiles we are all the time concerned about the way we
               create wealth, the way we conduct our business and we try to be
@@ -20,7 +20,9 @@ const ContactForm = () => {
             </p>
           </div>
           <div className="col-xl-6 col-lg-6 col-md-6">
-            <h2 style={{ textTransform: "uppercase" }}>Contact Us</h2>
+            <h2 className="contact-us" style={{ textTransform: "uppercase" }}>
+              Contact Us
+            </h2>
 
             <form>
               <label>Name</label>

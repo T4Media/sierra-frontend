@@ -10,10 +10,12 @@ import Navbar from "../../components/navbar/navbar";
 import "./about_eff.scss";
 import { useState, useEffect } from "react";
 import SierraLoader from "./../../components/Loader/sierraLoader";
+import axios from "axios";
 
 const AboutEFF = (props) => {
   const [classNamay, setClassNamay] = useState("about-eff");
   const [spinner, setSpinner] = useState(true);
+  const [aboutData, setAboutData] = useState();
 
   const makeBlur = () => {
     setClassNamay("about-eff blur");
@@ -24,10 +26,17 @@ const AboutEFF = (props) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setSpinner(false);
-    }, 1000);
-  });
+    axios
+      .get(process.env.REACT_APP_DEVELOPMENT_LINK + "aboutUs/")
+      .then((response) => {
+        setAboutData(response.data);
+        console.log(response.data);
+        setSpinner(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return spinner ? (
     <SierraLoader />
@@ -42,11 +51,11 @@ const AboutEFF = (props) => {
       <Sidebar display={props.display} closeRightMenu={props.closeRightMenu} />
 
       <div className="container">
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
+        <Section1 para1={aboutData.para1} />
+        <Section2 para2={aboutData.para2} />
+        <Section3 para3={aboutData.para3} />
+        <Section4 para4={aboutData.para4} />
+        <Section5 para5={aboutData.para5} />
       </div>
       <Footer />
     </div>

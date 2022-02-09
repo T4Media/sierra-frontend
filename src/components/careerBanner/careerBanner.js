@@ -1,5 +1,5 @@
 import "./careerBanner.scss";
-const CareerBanner = () => {
+const CareerBanner = (props) => {
   return (
     <div className="container-fluid background-careers">
       <div className="heading-for-career">
@@ -14,11 +14,7 @@ const CareerBanner = () => {
             </div>
           </h4>
 
-          <p>
-            Want to join the EFF team? If you have a passion for planning & want
-            to work for a rapidly growing entrepreneurial company, check out the
-            listings below or send your resume to careers@eff.com.
-          </p>
+          <p>{props.paragraph}</p>
 
           <button
             className="mt-5"

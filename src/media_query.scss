@@ -75,7 +75,7 @@
     }
 
     img {
-      left: 12%;
+      left: 7%;
       top: -40px;
       position: relative;
       width: 28rem;
@@ -97,6 +97,27 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .process-img .img-and-text {
+    width: 660px !important;
+
+    img {
+      width: 660px !important;
+    }
+
+    .process-1 {
+      top: 155px !important;
+      left: 18px !important;
+    }
+
+    .process-2 {
+      top: 156px !important;
+      right: -45px !important;
+      p {
+        left: -5px !important;
+      }
+    }
+  }
+
   .sourcing-and-development .contact-form .container .row .col-xl-6 {
     input {
       width: 100% !important;
@@ -238,6 +259,40 @@
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+  .process-img .img-and-text {
+    width: 480px !important;
+
+    img {
+      width: 480px !important;
+    }
+
+    p {
+      width: 125px !important;
+      font-size: 13px;
+    }
+
+    .process-1 {
+      top: 110px !important;
+      left: -10px !important;
+    }
+
+    .process-2 {
+      top: 108px !important;
+      right: -35px !important;
+      p {
+        left: 18px !important;
+      }
+    }
+
+    .process-3 {
+      bottom: -106px !important;
+      left: 10px !important;
+    }
+    .process-4 {
+      bottom: -106px !important;
+    }
+  }
+
   .sourcing-and-development .contact-form .container .row {
     text-align: -webkit-center;
 
@@ -507,6 +562,60 @@
 }
 
 @media (max-width: 575px) {
+  .services .container .row .col-xl-4 .service-card {
+    text-align: center !important;
+  }
+
+  .contact-form .container .row .col-xl-6 .our-capabilities {
+    text-align: center !important;
+  }
+
+  .contact-form .container .row .col-xl-6 p {
+    padding-right: 0 !important;
+  }
+
+  .contact-form .container .row .col-xl-6 .contact-us {
+    text-align: center !important;
+    margin-top: 3rem !important;
+  }
+
+  .contact-form .container .row .col-xl-6 input,
+  textarea {
+    width: 105% !important;
+  }
+
+  .process-img .img-and-text {
+    width: 300px !important;
+
+    img {
+      width: 300px !important;
+      margin-top: 10rem;
+    }
+
+    .process-1 {
+      top: 35px !important;
+      left: -6px !important;
+    }
+
+    .process-2 {
+      top: 35px !important;
+      right: -40px !important;
+    }
+
+    .process-3 {
+      bottom: -112px !important;
+      left: -10px !important;
+    }
+
+    .process-4 {
+      bottom: -112px !important;
+      right: -25px !important;
+      p {
+        left: 0px !important;
+      }
+    }
+  }
+
   .sourcing-and-development .contact-form .container .row {
     text-align: -webkit-center;
 
@@ -630,6 +739,7 @@
     background-color: #ffffff;
     display: flex;
     align-items: center;
+    justify-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 0px;

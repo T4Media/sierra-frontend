@@ -11,6 +11,7 @@
   }
   div {
     overflow: hidden;
+    text-align: -webkit-center;
     position: relative;
     float: right;
     height: 85px;
@@ -118,6 +119,7 @@
   .row {
     div {
       margin-top: 3rem;
+      text-align: -webkit-center;
       svg {
         font-size: 2.5rem;
         fill: #d3a657e3;

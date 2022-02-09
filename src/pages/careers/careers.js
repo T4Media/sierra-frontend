@@ -7,24 +7,32 @@ import JobOpening from "../../components/jobOpening/jobOpening";
 import Footer from "./../../components/footer/footer";
 import HorseLoader from "../../components/Loader/horseLoader";
 import SierraLoader from "./../../components/Loader/sierraLoader";
+import axios from "axios";
 
 const Careers = (props) => {
   const [classNamay, setClassNamay] = useState("careers");
-  const [spinner, setSpinner] = useState(true);
+  const [spinner, setSpinner] = useState(false);
+  const [careersData, setCareersData] = useState();
 
   const makeBlur = () => {
     setClassNamay("careers blur");
   };
 
+  useEffect(() => {
+    axios
+      .get(process.env.REACT_APP_DEVELOPMENT_LINK + "careers/")
+      .then((response) => {
+        setCareersData(response.data);
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const removeBlur = () => {
     setClassNamay("careers");
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setSpinner(false);
-    }, 1000);
-  });
 
   return spinner ? (
     <SierraLoader />
@@ -37,10 +45,10 @@ const Careers = (props) => {
         removeBlur={removeBlur}
       />
 
-      <CareerBanner />
-      <Eff_Benefits />
+      <CareerBanner paragraph={careersData && careersData.firstPara} />
+      <Eff_Benefits benefits={careersData && careersData.benefits} />
       <hr />
-      <JobOpening />
+      <JobOpening jobs={careersData.jobs} />
       <Footer />
     </div>
   );

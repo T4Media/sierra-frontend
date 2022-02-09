@@ -13,6 +13,7 @@ import { FaCreativeCommonsSampling } from "react-icons/fa";
 import { TiSocialFlickr, TiTick } from "react-icons/ti";
 import { GiArchiveResearch, GiMissileLauncher } from "react-icons/gi";
 import { SiMicrostrategy } from "react-icons/si";
+import processImage from "../../images/4.jpg";
 
 const DigitalMerchandisingService = (props) => {
   const sourcingService = [
@@ -89,7 +90,25 @@ const DigitalMerchandisingService = (props) => {
       />
       <h1 className="service-name">Digital Merchandising Service</h1>
       <Services sourcingService={sourcingService} />
-      <OurProcess sourcingProcess={sourcingProcess} />
+
+      <div className="process-img">
+        <h1 className="our-process">Our Process</h1>
+
+        <div className="img-and-text">
+          <img src={processImage} alt="" />
+
+          {sourcingProcess.map((sp, i) => (
+            <div className={`process-${i + 1}`}>
+              <h1>{sp.name}</h1>
+              <p>
+                Yarns, Fabrics, Garments and other Home textiles products are
+                manufactured and exported to 49 different
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="container">
         <InfoPanelImageSection />
       </div>

@@ -8,7 +8,7 @@ import Cookie from "cookie-universal";
 import axios from "axios";
 import { addToken } from "../../services/slices/tokenSlice";
 
-const JobOpening = () => {
+const JobOpening = (props) => {
   const [isShowApplyForm, setIsShowApplyForm] = useState(false);
   const [jobPost, setJobPost] = useState();
 
@@ -115,15 +115,15 @@ const JobOpening = () => {
                 closeSigninModal={closeSigninModal}
               />
             </div>
-            {jobOpenings.map((job) => (
+            {props.jobs.map((job) => (
               <tr>
                 <td className="job-post">
-                  <h5> {job.jobPost}</h5>
-                  <p> {job.briefDecription}</p>
+                  <h5> {job.job_name}</h5>
+                  <p> {job.designation_name}</p>
                 </td>
                 <td>
-                  <h5>{job.jobLocation}</h5>
-                  <p>United States of America</p>
+                  <h5>{job.area}</h5>
+                  <p>{job.country}</p>
                 </td>
                 <td className="job-type">
                   <span
@@ -136,7 +136,7 @@ const JobOpening = () => {
                       fontWeight: 500,
                     }}
                   >
-                    {job.jobType}
+                    {job.job_type}
                   </span>
 
                   {!token ? (

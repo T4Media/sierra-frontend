@@ -15,9 +15,11 @@ import aboutUs from "../../images/leadership/about-us.jpg";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import HorseLoader from "../../components/Loader/horseLoader";
 import SierraLoader from "./../../components/Loader/sierraLoader";
+import axios from "axios";
 const Leadership = (props) => {
   const [classNamay, setClassNamay] = useState("leadership");
   const [spinner, setSpinner] = useState(true);
+  const [leadershipData, setLeadershipData] = useState();
 
   const makeBlur = () => {
     setClassNamay("leadership blur");
@@ -28,10 +30,18 @@ const Leadership = (props) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setSpinner(false);
-    }, 1000);
-  });
+    axios
+      .get(process.env.REACT_APP_DEVELOPMENT_LINK + "facilities/")
+      .then((response) => {
+        setLeadershipData(response.data);
+        console.log(response.data);
+        setSpinner(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return spinner ? (
     <SierraLoader />
   ) : (
@@ -39,10 +49,7 @@ const Leadership = (props) => {
       <Navbar st={props.st} makeBlur={makeBlur} removeBlur={removeBlur} />
 
       <div className="container">
-        <h1 className="container-heading">
-          Our dedicated team of creatives is bursting with talent, experience
-          and passion for what we do.
-        </h1>
+        <h1 className="container-heading">{leadershipData.mainHeading}</h1>
 
         <center>
           <img src={leadershipMainImage} alt="" />
@@ -56,18 +63,7 @@ const Leadership = (props) => {
               <h1>Who We Are ?</h1>
             </div>
             <div className="paragraph">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
+              <p>{leadershipData.whoAreWe}</p>
             </div>
           </div>
         </div>
@@ -82,70 +78,21 @@ const Leadership = (props) => {
           </h1>
 
           <div className="row" style={{ justifyContent: "center" }}>
-            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div className="panel">
-                <div className="svg">
-                  <div className="icon">
-                    <GiJugglingSeal />
+            {leadershipData.features.map((feat) => (
+              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div className="panel">
+                  <div className="svg">
+                    <div className="icon">
+                      <GiJugglingSeal />
+                    </div>
+                  </div>
+                  <div className="text">
+                    <h3>{feat.feature_name}</h3>
+                    <p>{feat.feature_detail}</p>
                   </div>
                 </div>
-                <div className="text">
-                  <h3>Graphic Design</h3>
-                  <p>
-                    Tempore corrupti temporibus fuga earum asperiores fugit
-                    laudantium.
-                  </p>
-                </div>
               </div>
-            </div>
-            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div className="panel">
-                <div className="svg">
-                  <div className="icon">
-                    <AiOutlineMobile />
-                  </div>
-                </div>
-                <div className="text">
-                  <h3>Web & Mobile Design</h3>
-                  <p>
-                    Tempore corrupti temporibus fuga earum asperiores fugit
-                    laudantium.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div className="panel">
-                <div className="svg">
-                  <div className="icon">
-                    <TiSocialAtCircular />
-                  </div>
-                </div>
-                <div className="text">
-                  <h3>Social Media Marketing</h3>
-                  <p>
-                    Tempore corrupti temporibus fuga earum asperiores fugit
-                    laudantium.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div className="panel">
-                <div className="svg">
-                  <div className="icon">
-                    <HiOutlineDocumentReport />
-                  </div>
-                </div>
-                <div className="text">
-                  <h3>Document Legal Policy</h3>
-                  <p>
-                    Tempore corrupti temporibus fuga earum asperiores fugit
-                    laudantium.
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -207,57 +154,22 @@ const Leadership = (props) => {
                 players.
               </p>
 
-              <div className="heading-for-about">
-                <h4 className="about-us-section-heading">
-                  <AiOutlineInfoCircle
-                    style={{
-                      position: "relative",
-                      top: "-3px",
-                      marginRight: "5px",
-                    }}
-                  />
-                  Our Mission
-                </h4>
-                <p>
-                  luctus massa ipsum at tempus eleifend congue lectus bibendum
-                </p>
-              </div>
-
-              <hr />
-
-              <div className="heading-for-about">
-                <h4 className="about-us-section-heading">
-                  <AiOutlineInfoCircle
-                    style={{
-                      position: "relative",
-                      top: "-3px",
-                      marginRight: "5px",
-                    }}
-                  />
-                  Our Goals
-                </h4>
-                <p>
-                  luctus massa ipsum at tempus eleifend congue lectus bibendum
-                </p>
-              </div>
-              <hr />
-              <div className="heading-for-about">
-                <h4 className="about-us-section-heading">
-                  <AiOutlineInfoCircle
-                    style={{
-                      position: "relative",
-                      top: "-3px",
-                      marginRight: "5px",
-                    }}
-                  />
-                  Why Us?
-                </h4>
-                <p>
-                  luctus massa ipsum at tempus eleifend congue lectus bibendum
-                </p>
-              </div>
-
-              <hr />
+              {leadershipData.about_company.map((ac) => (
+                <div className="heading-for-about">
+                  <h4 className="about-us-section-heading">
+                    <AiOutlineInfoCircle
+                      style={{
+                        position: "relative",
+                        top: "-3px",
+                        marginRight: "5px",
+                      }}
+                    />
+                    {ac.about_main}
+                  </h4>
+                  <p>{ac.main_description}</p>
+                  <hr />
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -5,6 +5,28 @@
 
       margin-top: 5rem;
       .col-xl-6 {
+        .contact-us {
+          text-align: left;
+          font-size: 35px;
+          margin-bottom: 2rem;
+          font-weight: bolder;
+          font-family: "Noah Grotesque";
+          color: #d7af68;
+          text-transform: uppercase;
+          text-decoration: revert;
+          letter-spacing: 3px;
+        }
+        .our-capabilities {
+          text-align: left;
+          font-size: 45px;
+          font-weight: bolder;
+          font-family: "Noah Grotesque";
+          color: #d7af68;
+          text-transform: uppercase;
+          text-decoration: revert;
+          letter-spacing: 3px;
+        }
+
         p {
           padding-right: 100px;
           margin-top: 1rem;
