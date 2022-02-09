@@ -31,7 +31,7 @@ const Leadership = (props) => {
 
   useEffect(() => {
     axios
-      .get(process.env.REACT_APP_DEVELOPMENT_LINK + "facilities/")
+      .get(process.env.REACT_APP_AMAZON_SERVER_LINK + "facilities/")
       .then((response) => {
         setLeadershipData(response.data);
         console.log(response.data);

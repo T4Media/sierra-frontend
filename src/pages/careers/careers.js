@@ -20,7 +20,7 @@ const Careers = (props) => {
 
   useEffect(() => {
     axios
-      .get(process.env.REACT_APP_DEVELOPMENT_LINK + "careers/")
+      .get(process.env.REACT_APP_AMAZON_SERVER_LINK + "careers/")
       .then((response) => {
         setCareersData(response.data);
         console.log(response.data);

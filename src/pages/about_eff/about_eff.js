@@ -27,7 +27,7 @@ const AboutEFF = (props) => {
 
   useEffect(() => {
     axios
-      .get(process.env.REACT_APP_DEVELOPMENT_LINK + "aboutUs/")
+      .get(process.env.REACT_APP_AMAZON_SERVER_LINK + "aboutUs/")
       .then((response) => {
         setAboutData(response.data);
         console.log(response.data);
