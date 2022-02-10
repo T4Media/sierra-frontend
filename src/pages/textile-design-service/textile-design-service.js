@@ -10,10 +10,12 @@ import ContactForm from "./../../components/contact-form/contact-form";
 import { FaSketch } from "react-icons/fa";
 import { MdGraphicEq, MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { GiTeamIdea } from "react-icons/gi";
+import { useLocation } from "react-router-dom";
 import { AiOutlineSketch } from "react-icons/ai";
 import { GiMedievalBarracks } from "react-icons/gi";
 import { HiPresentationChartLine } from "react-icons/hi";
 import processImage from "../../images/4.jpg";
+import axios from "axios";
 
 const TextileDesignService = (props) => {
   const sourcingService = [
@@ -53,6 +55,8 @@ const TextileDesignService = (props) => {
   ];
 
   const [classNamay, setClassNamay] = useState("textile-design-service");
+  const location = useLocation();
+  const [serviceData, setServiceData] = useState(true);
   const [spinner, setSpinner] = useState(true);
 
   const makeBlur = () => {
@@ -62,12 +66,22 @@ const TextileDesignService = (props) => {
   const removeBlur = () => {
     setClassNamay("textile-design-service");
   };
-
   useEffect(() => {
-    setTimeout(() => {
-      setSpinner(false);
-    }, 1000);
-  });
+    axios
+      .get(process.env.REACT_APP_AMAZON_SERVER_LINK + "services/byParams", {
+        params: {
+          slug: location.pathname,
+        },
+      })
+      .then((response) => {
+        setServiceData(response.data);
+        setSpinner(false);
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return spinner ? (
     <SierraLoader />
@@ -82,7 +96,7 @@ const TextileDesignService = (props) => {
 
       <h1 className="service-name">Textile And Design Services</h1>
 
-      <Services sourcingService={sourcingService} />
+      <Services sourcingService={serviceData.services} />
 
       <div className="process-img">
         <h1 className="our-process">Our Process</h1>
@@ -90,15 +104,13 @@ const TextileDesignService = (props) => {
         <div className="img-and-text">
           <img src={processImage} alt="" />
 
-          {sourcingProcess.map((sp, i) => (
-            <div className={`process-${i + 1}`}>
-              <h1>{sp.name}</h1>
-              <p>
-                Yarns, Fabrics, Garments and other Home textiles products are
-                manufactured and exported to 49 different
-              </p>
-            </div>
-          ))}
+          {serviceData &&
+            serviceData.process.map((sp, i) => (
+              <div className={`process-${i + 1}`}>
+                <h1>{sp.process_name}</h1>
+                <p>{sp.process_description}</p>
+              </div>
+            ))}
         </div>
       </div>
 
@@ -106,7 +118,7 @@ const TextileDesignService = (props) => {
         <InfoPanelImageSection />
       </div>
 
-      <ContactForm />
+      <ContactForm capabilities={serviceData.capabilities} />
 
       <Footer />
     </div>

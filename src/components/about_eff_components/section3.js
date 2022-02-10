@@ -9,9 +9,9 @@ import "./style.scss";
 const Section3 = (props) => {
   return (
     <div className="section-3 mt-5">
-      <h1>About the Exclusive Fabrics Groups ..</h1>
+      <h1>Concerning the Individual Fabric Groups</h1>
       <h6 className="mt-5">
-        Founded in 1902 by Robert Mould, Romo is a family run business in its
+        Founded in 1992 by Hassan Lodhi, Romo is a family run business in its
         fifth generation.
       </h6>
       <p className="mt-4">{props.para3}</p>

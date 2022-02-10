@@ -101,23 +101,26 @@ const Leadership = (props) => {
         <div className="container">
           <div className="row" style={{ justifyContent: "center" }}>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <h5>Our Staff</h5>
-              <h1>We help to create visual strategies.</h1>
+              <h5>Our Staff, Our Pride.</h5>
+              <h1>
+                Our tenacious designers are the brains behind the creation of
+                our materials.
+              </h1>
               <p>
-                We are Vie. We create award-winning websites,
-                <br /> remarkable brands and cutting-edge apps. <br />
-                Nullam imperdie.
+                Our designers are the very identity of Sierra Textiles and
+                Fabrics. Their potent skills and expertise facilitate the
+                materialization of our fine production.
               </p>
               <h2 style={{ marginBottom: "2rem" }}>
                 Here are some of our great skills
               </h2>
-              <h6>UI DESIGN</h6>
+              <h6> Sketching</h6>
               <div class="bar learning"></div>
-              <h6>UX DESIGN</h6>
+              <h6>Painting</h6>
               <div class="bar back basic"></div>
-              <h6>DIGITAL MARKETING</h6>
+              <h6>Color Mixing</h6>
               <div class="bar back intermediate"> </div>
-              <h6>SOCIAL MEDIA</h6>
+              <h6>Proportion</h6>
               <div class="bar front advanced"></div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">

@@ -159,7 +159,7 @@ h6 {
 
       h1 {
         text-align: left;
-        color: #f15a23;
+        color: #db9e33;
         font-size: 24px;
       }
       p {
@@ -177,7 +177,7 @@ h6 {
       right: -55px;
       h1 {
         text-align: left;
-        color: #c73494;
+        color: #db9e33;
         font-size: 24px;
       }
       p {
@@ -185,19 +185,38 @@ h6 {
         font-size: 14px;
         line-height: 20px;
         text-align: center;
-        left: -30px;
+        left: -25px;
         position: relative;
       }
     }
 
     .process-3 {
       position: absolute;
-      bottom: -25px;
-      left: 40px;
+      bottom: -45px;
+      left: 50px;
       h1 {
         text-align: left;
         font-size: 24px;
-        color: #53c2b9;
+        color: #db9e33;
+      }
+      p {
+        width: 190px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        position: relative;
+        left: -25px;
+      }
+    }
+
+    .process-4 {
+      position: absolute;
+      bottom: -70px;
+      right: 0px;
+      h1 {
+        text-align: left;
+        color: #db9e33;
+        font-size: 24px;
       }
       p {
         width: 155px;
@@ -209,13 +228,13 @@ h6 {
       }
     }
 
-    .process-4 {
+    .process-5 {
       position: absolute;
       bottom: -25px;
       right: 0px;
       h1 {
         text-align: left;
-        color: #7c5aa6;
+        color: #db9e33;
         font-size: 24px;
       }
       p {

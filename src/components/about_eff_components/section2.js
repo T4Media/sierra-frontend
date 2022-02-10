@@ -6,7 +6,7 @@ import { propTypes } from "react-bootstrap/esm/Image";
 const Section2 = (props) => {
   return (
     <div className="section-2">
-      <h1>The experts in fabrics and wallcoverings</h1>
+      <h1>Connoisseurs of Fabric Infrastructure</h1>
       <p className="mt-5">{props.para2}</p>
 
       <div className="row mt-5">

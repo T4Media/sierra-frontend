@@ -1,5 +1,3 @@
-import Section4 from "./../../components/about_eff_components/section4";
-import Section5 from "./../../components/about_eff_components/section5";
 import Section1 from "../../components/about_eff_components/section1";
 import Section2 from "../../components/about_eff_components/section2";
 import Section3 from "../../components/about_eff_components/section3";
@@ -54,8 +52,8 @@ const AboutEFF = (props) => {
         <Section1 para1={aboutData.para1} />
         <Section2 para2={aboutData.para2} />
         <Section3 para3={aboutData.para3} />
-        <Section4 para4={aboutData.para4} />
-        <Section5 para5={aboutData.para5} />
+        {/* <Section4 para4={aboutData.para4} />
+        <Section5 para5={aboutData.para5} /> */}
       </div>
       <Footer />
     </div>

@@ -6,7 +6,7 @@ const Section1 = (props) => {
     <>
       <div className="row section-1">
         <div className="col-lg-6 col-xl-6">
-          <h1 className="mb-5">About Exclusive Fabrics</h1>
+          <h1 className="mb-5">About Sierra</h1>
 
           <p className="para-without-image">{props.para1}</p>
 

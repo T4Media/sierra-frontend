@@ -17,8 +17,8 @@ const Services = (props) => {
             <div className="col-xl-4 col-lg-4 col-md-4">
               <div className="service-card">
                 {s.icon}
-                <h3>{s.serviceName}</h3>
-                <p>{s.description}</p>
+                <h3>{s.service_name}</h3>
+                <p>{s.service_description}</p>
                 {/* <span>
                   {s.type} <BsArrowRightShort />
                 </span> */}

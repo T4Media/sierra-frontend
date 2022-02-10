@@ -1,11 +1,24 @@
 import "./info-panel-image-section.scss";
-import fa from "../../images/brands/fa.jpg";
-import fm from "../../images/brands/fm.jpg";
-import fo from "../../images/brands/fo.jpg";
 import hpd from "../../images/logo/hpd.png";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const InfoPanelImageSection = () => {
+  const [homeData, setHomeData] = useState();
+
+  useEffect(() => {
+    axios
+      .get(process.env.REACT_APP_AMAZON_SERVER_LINK + "homePageContent/")
+      .then((response) => {
+        setHomeData(response.data);
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className="row info-panel-images">
       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 card-1">
@@ -16,9 +29,9 @@ const InfoPanelImageSection = () => {
             <div className="mask">
               <h2>Half Price Drapes</h2>
               <p>
-                Embracing the growing trend for outdoor living, external spaces
-                are being transformed into stylish havens. Combining
-                contemporary style with practicality and durability.
+                External household spaces are rapidly transitioning into a
+                sanctum exuding style and sophistication. These fashionable
+                havens are an amalgamation of quality and longevity.
               </p>
               <Link to="#">Read More</Link>
             </div>
@@ -26,14 +39,14 @@ const InfoPanelImageSection = () => {
         </div>
       </div>
       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 card-2">
-        <img src={fa} alt="fa" />
+        <img src={homeData && homeData.image_1} alt="fa" />
       </div>
 
       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 card-3">
-        <img src={fm} alt="fm" />
+        <img src={homeData && homeData.image_2} alt="fm" />
       </div>
       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 card-4">
-        <img src={fo} alt="fo" />
+        <img src={homeData && homeData.image_3} alt="fo" />
       </div>
     </div>
   );
