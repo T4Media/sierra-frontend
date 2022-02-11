@@ -27,4 +27,80 @@
     top: 0 !important;
     margin-top: 5rem;
   }
+
+  .merchandising-process-1 {
+    position: absolute;
+    top: 140px;
+    left: 45px;
+
+    h1 {
+      text-align: left;
+      color: #db9e33;
+      font-size: 24px;
+    }
+    p {
+      width: 120px;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: left;
+      left: -5px;
+      position: relative;
+    }
+  }
+  .merchandising-process-2 {
+    position: absolute;
+    top: 140px;
+    right: 14px;
+    h1 {
+      text-align: left;
+      color: #db9e33;
+      font-size: 24px;
+    }
+    p {
+      width: 120px;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: left;
+      left: -5px;
+      position: relative;
+    }
+  }
+
+  .merchandising-process-3 {
+    position: absolute;
+    bottom: -15px;
+    left: 70px;
+    h1 {
+      text-align: left;
+      font-size: 24px;
+      color: #db9e33;
+    }
+    p {
+      width: 190px;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: left;
+      position: relative;
+      left: 0px;
+    }
+  }
+
+  .merchandising-process-4 {
+    position: absolute;
+    bottom: -70px;
+    right: 0px;
+    h1 {
+      text-align: left;
+      color: #db9e33;
+      font-size: 24px;
+    }
+    p {
+      width: 155px;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: left;
+      position: relative;
+      left: 2px;
+    }
+  }
 }

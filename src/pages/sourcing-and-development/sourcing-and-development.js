@@ -113,7 +113,7 @@ const SourcingAndDevelopment = (props) => {
           <img src={processImage} alt="" />
 
           {serviceData.process.map((sp, i) => (
-            <div className={`process-${i + 1}`}>
+            <div className={`development-process-${i + 1}`}>
               <h1>{sp.process_name}</h1>
               <p>{sp.process_description}</p>
             </div>

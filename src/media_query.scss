@@ -97,24 +97,18 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .sourcing-and-development .development-process-1 {
+    left: 0px !important;
+  }
+  .sourcing-and-development .development-process-2 {
+    right: -5px !important;
+  }
+
   .process-img .img-and-text {
     width: 660px !important;
 
     img {
       width: 660px !important;
-    }
-
-    .process-1 {
-      top: 155px !important;
-      left: 18px !important;
-    }
-
-    .process-2 {
-      top: 156px !important;
-      right: -45px !important;
-      p {
-        left: -5px !important;
-      }
     }
   }
 
@@ -259,6 +253,60 @@
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+  .sourcing-and-development .development-process-1 {
+    top: 95px !important;
+    left: -35px !important;
+    p {
+      font-size: 13px !important;
+      line-height: 16px !important;
+    }
+
+    h1 {
+      text-align: left !important;
+      color: #db9e33 !important;
+      font-size: 18px !important;
+    }
+  }
+
+  .sourcing-and-development .development-process-2 {
+    position: absolute !important;
+    top: 93px !important;
+    right: -42px !important;
+
+    h1 {
+      font-size: 18px !important;
+    }
+
+    p {
+      font-size: 13px !important;
+    }
+  }
+
+  .sourcing-and-development .development-process-3 {
+    bottom: -100px !important;
+    left: 0px !important;
+    p {
+      font-size: 13px !important;
+      line-height: 16px !important;
+    }
+    h1 {
+      font-size: 18px !important;
+    }
+  }
+
+  .sourcing-and-development .development-process-4 {
+    bottom: -105px !important;
+    right: -38px !important;
+
+    p {
+      font-size: 13px !important;
+      line-height: 16px !important;
+      h1 {
+        font-size: 18px !important;
+      }
+    }
+  }
+
   .process-img .img-and-text {
     width: 480px !important;
 
@@ -269,27 +317,6 @@
     p {
       width: 125px !important;
       font-size: 13px;
-    }
-
-    .process-1 {
-      top: 110px !important;
-      left: -10px !important;
-    }
-
-    .process-2 {
-      top: 108px !important;
-      right: -35px !important;
-      p {
-        left: 18px !important;
-      }
-    }
-
-    .process-3 {
-      bottom: -106px !important;
-      left: 10px !important;
-    }
-    .process-4 {
-      bottom: -106px !important;
     }
   }
 
@@ -562,6 +589,62 @@
 }
 
 @media (max-width: 575px) {
+  .sourcing-and-development .development-process-1 {
+    top: 28px !important;
+    left: -35px !important;
+    p {
+      font-size: 13px !important;
+      line-height: 16px !important;
+    }
+
+    h1 {
+      text-align: left !important;
+      color: #db9e33 !important;
+      font-size: 18px !important;
+    }
+  }
+
+  .sourcing-and-development .development-process-2 {
+    position: absolute !important;
+
+    top: 28px !important;
+    right: -42px !important;
+
+    h1 {
+      font-size: 18px !important;
+    }
+
+    p {
+      font-size: 13px !important;
+    }
+  }
+
+  .sourcing-and-development .development-process-3 {
+    bottom: -100px !important;
+    left: -40px !important;
+    p {
+      font-size: 13px !important;
+      line-height: 16px !important;
+      left: 0px !important;
+    }
+    h1 {
+      font-size: 18px !important;
+    }
+  }
+
+  .sourcing-and-development .development-process-4 {
+    bottom: -105px !important;
+    right: -52px !important;
+
+    p {
+      font-size: 13px !important;
+      line-height: 16px !important;
+      h1 {
+        font-size: 18px !important;
+      }
+    }
+  }
+
   .services .container .row .col-xl-4 .service-card {
     text-align: center !important;
   }
@@ -590,29 +673,6 @@
     img {
       width: 300px !important;
       margin-top: 10rem;
-    }
-
-    .process-1 {
-      top: 35px !important;
-      left: -6px !important;
-    }
-
-    .process-2 {
-      top: 35px !important;
-      right: -40px !important;
-    }
-
-    .process-3 {
-      bottom: -112px !important;
-      left: -10px !important;
-    }
-
-    .process-4 {
-      bottom: -112px !important;
-      right: -25px !important;
-      p {
-        left: 0px !important;
-      }
     }
   }
 

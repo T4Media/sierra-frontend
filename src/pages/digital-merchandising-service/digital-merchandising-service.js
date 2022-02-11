@@ -117,7 +117,7 @@ const DigitalMerchandisingService = (props) => {
 
           {serviceData &&
             serviceData.process.map((sp, i) => (
-              <div className={`process-${i + 1}`}>
+              <div className={`merchandising-process-${i + 1}`}>
                 <h1>{sp.process_name}</h1>
                 <p>{sp.process_description}</p>
               </div>
