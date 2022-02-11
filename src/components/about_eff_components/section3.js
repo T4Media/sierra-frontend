@@ -10,10 +10,7 @@ const Section3 = (props) => {
   return (
     <div className="section-3 mt-5">
       <h1>Concerning the Individual Fabric Groups</h1>
-      <h6 className="mt-5">
-        Founded in 1992 by Hassan Lodhi, Romo is a family run business in its
-        fifth generation.
-      </h6>
+
       <p className="mt-4">{props.para3}</p>
       <div className="row mt-5">
         <div className="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6">

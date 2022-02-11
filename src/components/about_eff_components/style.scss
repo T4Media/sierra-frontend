@@ -16,7 +16,7 @@ p {
     height: 40rem;
   }
   .para-without-image {
-    line-height: 30px;
+    line-height: 35px;
   }
 
   .para-with-image {
@@ -32,7 +32,15 @@ p {
     }
   }
   h1 {
-    font-family: Quickpen;
+    margin-top: 5rem;
+    text-align: left;
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: "Noah Grotesque";
+    color: #d7af68;
+    text-transform: uppercase;
+    text-decoration: revert;
+    letter-spacing: 3px;
   }
 }
 
@@ -46,7 +54,15 @@ p {
   }
 
   h1 {
-    font-family: Quickpen;
+    margin-top: 0rem;
+    text-align: left;
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: "Noah Grotesque";
+    color: #d7af68;
+    text-transform: uppercase;
+    text-decoration: revert;
+    letter-spacing: 3px;
   }
 }
 
@@ -69,8 +85,15 @@ p {
     position: relative;
   }
   h1 {
-    font-family: Quickpen;
-    text-align: right;
+    margin-top: 5rem;
+    text-align: left;
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: "Noah Grotesque";
+    color: #d7af68;
+    text-transform: uppercase;
+    text-decoration: revert;
+    letter-spacing: 3px;
   }
   p {
     // top: 60px;

@@ -54,7 +54,10 @@ const ProductionAndQuality = (props) => {
 
       <h1 className="service-name">Production and Quality Control</h1>
 
-      <Services sourcingService={serviceData.services} />
+      <Services
+        mainParagraph={serviceData.mainParagraph}
+        sourcingService={serviceData.services}
+      />
 
       <div className="process-img">
         <h1 className="our-process">Our Process</h1>

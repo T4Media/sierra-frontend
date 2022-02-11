@@ -71,11 +71,7 @@ const Leadership = (props) => {
 
       <div className="best-features">
         <div className="container">
-          <h6>Best Features</h6>
-          <h1>
-            We are a new digital product
-            <br /> development agency
-          </h1>
+          <h1>Our Services</h1>
 
           <div className="row" style={{ justifyContent: "center" }}>
             {leadershipData.features.map((feat) => (
@@ -152,9 +148,10 @@ const Leadership = (props) => {
             <div className="col-xl-6">
               <h1>About Us</h1>
               <p className="below-about-us-heading">
-                Our creative Ad agency is ranked among the finest in the US.
-                <br /> We cultivate smart ideas for start-ups and seasoned
-                players.
+                Our brand has received national acclaim for its textile
+                cultivation and contribution to the creative industry. We have
+                transitioned from a startup to an enterprise at an accelerated
+                pace
               </p>
 
               {leadershipData.about_company.map((ac) => (
