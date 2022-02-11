@@ -176,7 +176,7 @@ const Facilities = (props) => {
               <img src={map_img} alt="" />
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <h3>Exclusive Fabrics Furnishing</h3>
+              <h3>Team Sierra Textiles</h3>
               <h1>The Best World Team</h1>
 
               <p>

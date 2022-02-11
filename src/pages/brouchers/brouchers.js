@@ -41,7 +41,7 @@ const Brouchers = (props) => {
         removeBlur={removeBlur}
       />
       <div className="container broucher-heading">
-        <h1>Exclusive Fabrics Brouchers</h1>
+        <h1>Sierra Textile's Brouchers</h1>
       </div>
 
       <div className="container broucher-card">
