@@ -48,7 +48,7 @@ const Careers = (props) => {
       <CareerBanner paragraph={careersData && careersData.firstPara} />
       <Eff_Benefits benefits={careersData && careersData.benefits} />
       <hr />
-      <JobOpening jobs={careersData.jobs} />
+      <JobOpening jobs={careersData && careersData.jobs} />
       <Footer />
     </div>
   );

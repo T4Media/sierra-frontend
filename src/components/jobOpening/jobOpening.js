@@ -115,50 +115,53 @@ const JobOpening = (props) => {
                 closeSigninModal={closeSigninModal}
               />
             </div>
-            {props.jobs.map((job) => (
-              <tr>
-                <td className="job-post">
-                  <h5> {job.job_name}</h5>
-                  <p> {job.designation_name}</p>
-                </td>
-                <td>
-                  <h5>{job.area}</h5>
-                  <p>{job.country}</p>
-                </td>
-                <td className="job-type">
-                  <span
-                    style={{
-                      background: "#d9b473",
-                      padding: "8px 18px",
-                      fontFamily: "Raleway",
-                      borderRadius: 8,
-                      color: "white",
-                      fontWeight: 500,
-                    }}
-                  >
-                    {job.job_type}
-                  </span>
-
-                  {!token ? (
-                    <Signin_Signup
-                      label="Apply"
+            {props.jobs &&
+              props.jobs.map((job) => (
+                <tr>
+                  <td className="job-post">
+                    <h5> {job.job_name}</h5>
+                    <p> {job.designation_name}</p>
+                  </td>
+                  <td>
+                    <h5>{job.area}</h5>
+                    <p>{job.country}</p>
+                  </td>
+                  <td className="job-type">
+                    <span
                       style={{
-                        background: "transparent",
-                        marginLeft: "0%",
-                        color: "#000000",
-                        fontSize: 15,
-                        marginTop: "5%",
+                        background: "#d9b473",
+                        padding: "8px 18px",
+                        fontFamily: "Raleway",
+                        borderRadius: 8,
+                        color: "white",
                         fontWeight: 500,
-                        border: "none",
-                        boxShadow: "none",
                       }}
-                    />
-                  ) : (
-                    <h5 onClick={() => handleApplyForm(job.jobPost)}>Apply</h5>
-                  )}
-                </td>
-              </tr>
-            ))}
+                    >
+                      {job.job_type}
+                    </span>
+
+                    {!token ? (
+                      <Signin_Signup
+                        label="Apply"
+                        style={{
+                          background: "transparent",
+                          marginLeft: "0%",
+                          color: "#000000",
+                          fontSize: 15,
+                          marginTop: "5%",
+                          fontWeight: 500,
+                          border: "none",
+                          boxShadow: "none",
+                        }}
+                      />
+                    ) : (
+                      <h5 onClick={() => handleApplyForm(job.jobPost)}>
+                        Apply
+                      </h5>
+                    )}
+                  </td>
+                </tr>
+              ))}
           </table>
         </center>
       </div>

@@ -9,7 +9,7 @@ const Eff_Benefits = (props) => {
   return (
     <div class="pagecontainer">
       <div class="benefitscontainer container">
-        <h2>Benefits of being EFF Employee</h2>
+        <h2>Benefits of being Sierra Employee</h2>
         <div className="row">
           {props.benefits &&
             props.benefits.map((b, idx) => {
