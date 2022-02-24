@@ -39,14 +39,14 @@ const InfoPanelImageSection = () => {
         </div>
       </div>
       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 card-2">
-        <img src={homeData && homeData.image_1} alt="fa" />
+        <img src={homeData && homeData.image_2} alt="fm" />
       </div>
 
       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 card-3">
-        <img src={homeData && homeData.image_2} alt="fm" />
+        <img src={homeData && homeData.image_3} alt="fo" />
       </div>
       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 card-4">
-        <img src={homeData && homeData.image_3} alt="fo" />
+        <img src={homeData && homeData.image_1} alt="fa" />
       </div>
     </div>
   );

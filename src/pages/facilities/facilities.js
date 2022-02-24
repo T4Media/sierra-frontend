@@ -50,7 +50,7 @@ const Facilities = (props) => {
 
       <div className="image-with-two-div">
         <div className="container">
-          <h1>Facilities in Exlusive Fabrics Furnsishing</h1>
+          <h1>Facilities in Sierra Textiles</h1>
           <center>
             <img className="building" src={facilities} alt="" />
           </center>
@@ -66,8 +66,8 @@ const Facilities = (props) => {
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 left">
               <div className="text-div">
                 <p>
-                  We have several business and industrial parks with available
-                  space for your business
+                  We have plenty of space and other benefits available for you
+                  to prosper in with convenience.
                 </p>
 
                 <Button1 />
@@ -80,21 +80,18 @@ const Facilities = (props) => {
       <div className="container construction-and-co">
         <div className="row">
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-sm-12 text-middle">
-            <h1>
-              Construction <br />
-              Machinery Co.
-            </h1>
+            <h1>Sierra’s History</h1>
 
             <h3>
-              We has a proud tradition of service <br /> as a General Contractor
-              since 1974
+              We has a proud tradition of service <br />
+              since 2007
             </h3>
             <p>
-              We headquartered in San Diego, brings over 42 years of local and
-              national construction experience; with a reputation for delivering
-              large and unique design-build projects ahead of schedule and on
-              budget. Our company has served clients and building owners for
-              over four decades.
+              We were established in 2007 and have built a reputation for
+              delivering out of the box fabrics that have given new life to
+              clients belonging to a myriad of households. We have catered to
+              thousands of clients with inventive projects that are as artistic
+              as they are enigmatic.
             </p>
 
             <Button1 />
@@ -118,52 +115,48 @@ const Facilities = (props) => {
           <div className="row">
             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sm-12">
               <GiHealthPotion />
-              <h2>Healthcare Building</h2>
+              <h2>Insurance Health and Wellness</h2>
               <p>
-                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit
+                We provide dental, vision and other health insurance options.
+                Complementary insurance is included as well.
               </p>
             </div>
             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sm-12">
-              <MdOutlineCastForEducation />
-              <h2>Education Building</h2>
+              <GiGreenhouse />
+              <h2>Paternal Leave</h2>
               <p>
-                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit
+                Both mothers and fathers have the privilege of taking leave to
+                tend to their family.
               </p>
             </div>
             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sm-12">
               <RiGovernmentLine />
-              <h2>Government Building</h2>
+              <h2>Financial Retirement </h2>
               <p>
-                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit
+                You have complete freedom to choose your period to retire in and
+                gain benefits
               </p>
             </div>
 
             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sm-12">
               <GiCommercialAirplane />
-              <h2>Commercial Building</h2>
+              <h2> Vacation and Time Off</h2>
               <p>
-                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit
-              </p>
-            </div>
-            <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sm-12">
-              <GiGreenhouse />
-              <h2>Residential Building</h2>
-              <p>
-                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit
+                You can take paid leave or time off for relaxation or vacation
+                purposes.
               </p>
             </div>
             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sm-12">
               <MdOutlineRestaurantMenu />
-              <h2>Restaurant Building</h2>
-              <p>
-                Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit
-              </p>
+
+              <h2>Perks and Discounts</h2>
+              <p>Lunch and Food breaks with membership.</p>
+            </div>
+            <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sm-12">
+              <MdOutlineCastForEducation />
+
+              <h2>Professional Support</h2>
+              <p>We provide open contact with management with transparency.</p>
             </div>
           </div>
         </div>
@@ -177,14 +170,13 @@ const Facilities = (props) => {
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <h3>Team Sierra Textiles</h3>
-              <h1>The Best World Team</h1>
+              <h1>Searching for Work?</h1>
 
               <p>
-                orem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                gravida cursus eleifend. Nullam ornare sapien quis vulputate
-                cursus. Vivamus vel pellentesque purus, sed dignissim elit.
-                Maecenas ac augue metus. Suspendisse in elit nibh. Vestibulum in
-                nibh risus. Phasellus ut cursus sem.
+                Join Sierra Textile and Fabrics and expand your potential with
+                our entrepreneurial endeavors and become part of the acclaimed
+                enterprise. All you need to have is commitment, faith and desire
+                to succeed. Send us your resume.
               </p>
 
               <Button1 />

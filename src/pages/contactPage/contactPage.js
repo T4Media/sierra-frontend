@@ -116,7 +116,7 @@ const ContactPage = (props) => {
           </div>
           <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.0318848775632!2d-121.80277684917284!3d37.695450224393376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fe62d7b1d18c1%3A0x723709a3d8a98a5b!2sExclusive%20Fabrics%20%26%20Furnishings%2C%20LLC!5e0!3m2!1sen!2s!4v1636547475033!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14483.865553126687!2d67.04890373320953!3d24.83082304383428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33d06cd9f7009%3A0xad205beeb5db3161!2sSierra%20Textile!5e0!3m2!1sen!2s!4v1645707003474!5m2!1sen!2s"
               width="100%"
               height="100%"
               style={{ border: "none" }}

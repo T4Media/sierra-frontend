@@ -11,15 +11,15 @@ import { useMediaQuery } from "react-responsive";
 import { useDispatch } from "react-redux";
 import Cookie from "cookie-universal";
 import { addToken } from "../../services/slices/tokenSlice";
-import HorseLoader from "../../components/Loader/horseLoader";
 import SierraLoader from "./../../components/Loader/sierraLoader";
+import Loader1 from "./../../components/Loader/loader1";
 
 const Products = (props) => {
   const [classNamay, setClassNamay] = useState("fabric");
   const [products, setProducts] = useState();
   const [spinner, setSpinner] = useState();
   const [currentImage, setCurrentImage] = useState(0);
-  const [subCategory, setSubCategory] = useState(0);
+  const [subCategory, setSubCategory] = useState({});
 
   const [token, setToken] = useState();
 
@@ -68,8 +68,6 @@ const Products = (props) => {
         setClassNamay("fabric");
         setProducts(response.data);
 
-        setSpinner(false);
-
         return axios
           .get(
             process.env.REACT_APP_AMAZON_SERVER_LINK + "subCategories/bySlug",
@@ -81,7 +79,7 @@ const Products = (props) => {
           )
           .then(function (response) {
             setSubCategory(response.data);
-
+            setSpinner(false);
             return axios
               .get(
                 process.env.REACT_APP_AMAZON_SERVER_LINK +
@@ -136,12 +134,11 @@ const Products = (props) => {
             </h1>
 
             <p className="description-text">
-              The countdown is on! Grab your shoes, plot your route, and let’s
-              get a move on! Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Sit amet tellus cras adipiscing enim. Ut porttitor leo a
-              diam sollicitudin. Turpis in eu mi bibendum neque egestas congue
-              quisque <s>egestas.</s>
+              {subCategory.subCategory_description ? (
+                subCategory.subCategory_description
+              ) : (
+                <Loader1 />
+              )}
             </p>
 
             {subCategory && subCategory.pdf ? (

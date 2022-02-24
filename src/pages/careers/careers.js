@@ -1,13 +1,12 @@
-import Navbar from "./../../components/navbar/navbar";
-import "./careers.scss";
-import { useState, useEffect } from "react";
 import CareerBanner from "../../components/careerBanner/careerBanner";
 import Eff_Benefits from "../../components/eff_benfits/eff_benefits";
-import JobOpening from "../../components/jobOpening/jobOpening";
-import Footer from "./../../components/footer/footer";
-import HorseLoader from "../../components/Loader/horseLoader";
 import SierraLoader from "./../../components/Loader/sierraLoader";
+import JobOpening from "../../components/jobOpening/jobOpening";
+import Navbar from "./../../components/navbar/navbar";
+import Footer from "./../../components/footer/footer";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import "./careers.scss";
 
 const Careers = (props) => {
   const [classNamay, setClassNamay] = useState("careers");
