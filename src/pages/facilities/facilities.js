@@ -102,7 +102,7 @@ const Facilities = (props) => {
         </div>
       </div>
 
-      <div className="certifications">
+      {/* <div className="certifications">
         <div className="container ">
           <h3>What we do</h3>
           <h1>Company Certifications</h1>
@@ -160,7 +160,7 @@ const Facilities = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="world-team">
         <div className="container">
