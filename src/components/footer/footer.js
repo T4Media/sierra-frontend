@@ -48,22 +48,47 @@ const Footer = () => {
             <label>SOCIAL SHARE</label>
             <div className="social-media mt-2 mb-2">
               <span>
-                <FaFacebookSquare />
+                <Link
+                  to={{
+                    pathname: "https://www.facebook.com/sierratextileofficial	",
+                  }}
+                  target="_blank"
+                >
+                  <FaFacebookSquare />
+                </Link>
+              </span>
+
+              <span>
+                <Link
+                  to={{
+                    pathname: "https://twitter.com/TextileSierra",
+                  }}
+                  target="_blank"
+                >
+                  <AiOutlineTwitter />
+                </Link>
+              </span>
+
+              <span>
+                <Link
+                  to={{
+                    pathname:
+                      "https://www.youtube.com/channel/UCBbnXQapdll1Tf8A1UyoPoA",
+                  }}
+                  target="_blank"
+                >
+                  <FaYoutube />
+                </Link>
               </span>
               <span>
-                <FiInstagram />
-              </span>
-              <span>
-                <AiOutlineTwitter />
-              </span>
-              <span>
-                <FaPinterestP />
-              </span>
-              <span>
-                <FaYoutube />
-              </span>
-              <span>
-                <FaLinkedin />
+                <Link
+                  to={{
+                    pathname: "https://www.linkedin.com/company/79144784	",
+                  }}
+                  target="_blank"
+                >
+                  <FaLinkedin />
+                </Link>
               </span>
             </div>
           </ul>
