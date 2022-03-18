@@ -47,7 +47,7 @@ const Navbar = (props) => {
     setProducts("");
     setBeInspried("");
     setWhereToBuy("");
-    setHeight("25rem");
+    setHeight("22rem");
   };
 
   const dontShowCompany = () => {
@@ -166,21 +166,21 @@ const Navbar = (props) => {
           <ul className={"where-to-buy " + whereToBuy} id="product-names">
             <li>
               <Link to="/sourcing-and-development">
-                SOURCING AND PRODUCT DEVELOPMENT
+                Sourcing and Product Development
               </Link>
             </li>
 
             <li>
               <Link to="/production-and-quality">
-                PRODUCTION AND QUALITY CONTROL
+                Production and Quality Control
               </Link>
             </li>
             <li>
-              <Link to="/textile-design-service"> TEXTILE DESIGN SERVICES</Link>
+              <Link to="/textile-design-service"> Textile Design Services</Link>
             </li>
             <li>
               <Link to="/digital-merchandising-service">
-                DIGITAL MERCHANDIZING SERVICES
+                Digital Merchandising Services
               </Link>
             </li>
           </ul>
@@ -189,7 +189,7 @@ const Navbar = (props) => {
             <Link to="/brouchers">
               <li
                 style={{
-                  fontSize: 17,
+                  fontSize: 18,
                   fontFamily: "Noah Grotesque Regular",
                 }}
               >
@@ -200,7 +200,7 @@ const Navbar = (props) => {
             <Link to="/video-library">
               <li
                 style={{
-                  fontSize: 17,
+                  fontSize: 18,
                   fontFamily: "Noah Grotesque Regular",
                 }}
               >
@@ -208,7 +208,7 @@ const Navbar = (props) => {
               </li>
             </Link>
 
-            <Link to="/blogs">
+            {/* <Link to="/blogs">
               <li
                 style={{
                   fontSize: 17,
@@ -217,7 +217,7 @@ const Navbar = (props) => {
               >
                 Blogs
               </li>
-            </Link>
+            </Link> */}
           </ul>
 
           <ul className={"company " + company} id="product-names">
@@ -228,13 +228,13 @@ const Navbar = (props) => {
                   <li>About Sierra Textiles</li>
                 </Link>
 
-                <Link to="/leadership">
+                {/* <Link to="/leadership">
                   <li>Leadership</li>
                 </Link>
 
                 <Link to="/facilities">
                   <li>Facilities</li>
-                </Link>
+                </Link> */}
               </ul>
             </li>
             <li>
@@ -246,7 +246,7 @@ const Navbar = (props) => {
                   }}
                   target="_blank"
                 >
-                  <li>Half Price Drapes</li>
+                  <li>Roklin</li>
                 </Link>
               </ul>
             </li>
