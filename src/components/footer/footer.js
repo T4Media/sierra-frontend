@@ -15,7 +15,7 @@ const { Search } = Input;
 
 const Footer = () => {
   return (
-    <div className="footer container-fluid 1233312">
+    <div className="footer container-fluid">
       <div className="row mt-4  ml-5">
         <div className="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-xs-12 mt-4 column-1">
           <ul>
