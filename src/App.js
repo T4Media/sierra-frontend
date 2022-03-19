@@ -64,6 +64,7 @@ function App() {
           path="/"
           component={() => (
             <Home
+            
               st={{
                 gradient: "gradient",
                 color: "white",
