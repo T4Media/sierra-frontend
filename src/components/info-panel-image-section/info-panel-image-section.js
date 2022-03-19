@@ -27,7 +27,7 @@ const InfoPanelImageSection = () => {
             <img src={roklin} alt="" />
 
             <div className="mask">
-              <h2>Half Price Drapes</h2>
+              <h2>Roklin</h2>
               <p>
                 External household spaces are rapidly transitioning into a
                 sanctum exuding style and sophistication. These fashionable

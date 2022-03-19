@@ -17,25 +17,38 @@ const Footer = () => {
   return (
     <div className="footer container-fluid">
       <div className="row mt-4  ml-5">
-        <div className="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-xs-12 mt-4 column-1">
+        <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-4 column-1">
           <ul>
-            <label>PRODUCTS</label>
-            <li>Curtain and drapes</li>
-            <li>Home Decore</li>
-            <li>Bedding</li>
-            <li>Hardware</li>
+            <label>Services</label>
+            <li>
+              <Link to="/sourcing-and-development">
+                Sourcing and Product Development
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/production-and-quality">
+                Production and Quality Control
+              </Link>
+            </li>
+            <li>
+              <Link to="/textile-design-service"> Textile Design Services</Link>
+            </li>
+            <li>
+              <Link to="/digital-merchandising-service">
+                Digital Merchandising Services
+              </Link>
+            </li>
           </ul>
           <ul className="mt-5">
             <label>COMPANY</label>
             <li>About Sierra Textiles</li>
-            <li>Terms and conditions</li>
-            <li>Facilities</li>
+            <li>Contact Us</li>
             <li>Careers</li>
-            <li>Legal</li>
           </ul>
         </div>
 
-        <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 mt-4 column-2">
+        <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-4 column-2">
           <ul className="connect-with-us">
             <label>CONNECT WITH US</label>
             <p>Join Our Community!</p>

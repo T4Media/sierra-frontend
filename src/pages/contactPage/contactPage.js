@@ -39,28 +39,24 @@ const ContactPage = (props) => {
           <h1>Let's Connect!</h1>
         </center>
         <div className="row">
-          <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <MdLocationOn />
             <h5 className="mt-4">OUR MAIN OFFICE</h5>
-            <p className="mt-3">SoHo 94 Broadway St New York, NY 1001</p>
+            <p className="mt-3"> B-75/280, Street # 3, Sector “A”, Kashmir Colony, Karachi</p>
           </div>
-          <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <FaPhone />
             <h5 className="mt-4">PHONE NUMBER</h5>
             <p className="mt-3">
-              234-9876-5400
-              <br /> 888-0123-4567 (Toll Free)
+            021-35393334
+              <br /> 021-35316924
             </p>
           </div>
-          <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <FaFax />
-            <h5 className="mt-4">FAX</h5>
-            <p className="mt-3">1-234-567-8900</p>
-          </div>
-          <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+         
+          <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <FaMailBulk />
             <h5 className="mt-4">MAIL</h5>
-            <p className="mt-3">hello@eff.com</p>
+            <p className="mt-3">sales@sierratextiles.com.pkjob</p>
           </div>
         </div>
         <hr
