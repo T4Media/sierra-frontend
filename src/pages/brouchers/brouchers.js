@@ -41,14 +41,14 @@ const Brouchers = (props) => {
         removeBlur={removeBlur}
       />
       <div className="container broucher-heading">
-        <h1>Exclusive Fabrics Brouchers</h1>
+        <h1>Sierra Textile's Brouchers</h1>
       </div>
 
       <div className="container broucher-card">
         <div className="row">
           {categories &&
             categories.map((c) =>
-              c.subCategory_image ? (
+              c.subCategory_image && c.pdf !== "undefined" ? (
                 <div className="col-xl-4 col-lg-4 col-md-6 mb-5">
                   <center>
                     <p className="sub-cat-name">{c.subCategory_name}</p>

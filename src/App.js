@@ -25,6 +25,10 @@ import VideoLibrary from "./pages/video-library/video-library";
 import Leadership from "./pages/leadership/leadership";
 import Facilities from "./pages/facilities/facilities";
 import SierraLoader from "./components/Loader/sierraLoader";
+import SourcingAndDevelopment from "./pages/sourcing-and-development/sourcing-and-development";
+import ProductionAndQuality from "./pages/production-and-quality/production-and-quality";
+import TextileDesignService from "./pages/textile-design-service/textile-design-service";
+import DigitalMerchandisingService from "./pages/digital-merchandising-service/digital-merchandising-service";
 
 function App() {
   const [display, setDisplay] = useState(false);
@@ -202,6 +206,64 @@ function App() {
             />
           )}
         />
+        <Route
+          exact
+          path="/sourcing-and-development"
+          component={() => (
+            <SourcingAndDevelopment
+              st={{
+                gradient: "",
+                color: "#828282",
+                logo: logo,
+                position: "relative",
+              }}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/production-and-quality"
+          component={() => (
+            <ProductionAndQuality
+              st={{
+                gradient: "",
+                color: "#828282",
+                logo: logo,
+                position: "relative",
+              }}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/textile-design-service"
+          component={() => (
+            <TextileDesignService
+              st={{
+                gradient: "",
+                color: "#828282",
+                logo: logo,
+                position: "relative",
+              }}
+            />
+          )}
+        />
+
+        <Route
+          exact
+          path="/digital-merchandising-service"
+          component={() => (
+            <DigitalMerchandisingService
+              st={{
+                gradient: "",
+                color: "#828282",
+                logo: logo,
+                position: "relative",
+              }}
+            />
+          )}
+        />
+
         <Route
           exact
           path="/:product_name"

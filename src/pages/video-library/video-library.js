@@ -40,7 +40,12 @@ const VideoLibrary = (props) => {
             textAlign: "center",
             fontSize: 55,
             marginBottom: -35,
-            fontFamily: "Quickpen",
+            fontWeight: "bolder",
+            fontFamily: "Noah Grotesque",
+            color: "#d7af68",
+            textTransform: "uppercase",
+            textDecoration: "revert",
+            letterSpacing: "5px",
           }}
         >
           Video Library

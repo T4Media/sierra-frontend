@@ -34,7 +34,7 @@ const Blog = (props) => {
         removeBlur={removeBlur}
       />
       <div className="container blogs-heading">
-        <h1>Exclusive Fabrics Blogs</h1>
+        <h1>Siera Textile's Blogs</h1>
       </div>
 
       <div className="container blogs-card">

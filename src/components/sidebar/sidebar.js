@@ -21,7 +21,7 @@ const Sideba = () => {
 
   const [mainField] = useState([
     { name: "Products", isOpen: false },
-    { name: "Where To Buy", isOpen: false },
+    { name: "Services", isOpen: false },
     { name: "Be Inspired", isOpen: false },
     { name: "Company", isOpen: false },
   ]);
@@ -118,6 +118,86 @@ const Sideba = () => {
                 ) : (
                   ""
                 )
+              )}
+              {mfIndex === 1 ? (
+                <>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/sourcing-and-development">
+                        Sourcing and Product Development
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/production-and-quality">
+                        Production and Quality Control
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/textile-design-service">
+                        Textile Design Services
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/digital-merchandising-service">
+                        Digital Merchandising Services
+                      </Link>
+                    </div>
+                  </li>
+                </>
+              ) : mfIndex === 2 ? (
+                <>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/brouchers">Show Brouchers</Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/video-library">Video Library</Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/blogs">Blogs</Link>
+                    </div>
+                  </li>
+                </>
+              ) : mfIndex === 3 ? (
+                <>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/about">About Us</Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/leadership">Leadership</Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/facilities">Facilities</Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/careers">Careers</Link>
+                    </div>
+                  </li>
+                  <li className="sub-categories">
+                    <div>
+                      <Link to="/contact_us">Contact Us</Link>
+                    </div>
+                  </li>
+                </>
+              ) : (
+                ""
               )}
             </AnimateHeight>
           </li>

@@ -36,6 +36,15 @@
   img {
     opacity: 0.5;
   }
+  .service-card{
+    opacity: 0.3;  
+  }
+
+  h1,h2,h3,h4{
+    opacity: 0.3;  
+
+  }
+
 }
 
 #__react-alert__ {
@@ -128,4 +137,34 @@ h6 {
 }
 .ant-input-group-addon {
   background-color: transparent !important;
+}
+.process-img {
+  width: 100%;
+  text-align: -webkit-center;
+  margin-bottom: 10rem;
+  .our-process {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-family: "Noah Grotesque";
+    color: #d7af68;
+    text-transform: uppercase;
+    text-decoration: revert;
+    letter-spacing: 3px;
+  }
+  .img-and-text {
+    position: relative;
+    width: 730px;
+
+    img {
+      width: 730px;
+    }
+  }
+}
+.bm-menu-wrap,
+.bm-overlay {
+  position: relative;
+  top: 0;
 }

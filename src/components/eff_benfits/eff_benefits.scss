@@ -11,6 +11,7 @@
   }
   div {
     overflow: hidden;
+    text-align: -webkit-center;
     position: relative;
     float: right;
     height: 85px;
@@ -38,7 +39,7 @@
   animation: flip3 4s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
 .flip4 {
-  animation: flip4 5s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+  animation: flip4 4s cubic-bezier(0.3, 1, 0.32, 1.2) infinite;
 }
 
 @keyframes flip4 {
@@ -116,8 +117,10 @@
 }
 .benefitscontainer {
   .row {
+    justify-content: center;
     div {
       margin-top: 3rem;
+      text-align: -webkit-center;
       svg {
         font-size: 2.5rem;
         fill: #d3a657e3;
