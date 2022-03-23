@@ -29,6 +29,7 @@ import SourcingAndDevelopment from "./pages/sourcing-and-development/sourcing-an
 import ProductionAndQuality from "./pages/production-and-quality/production-and-quality";
 import TextileDesignService from "./pages/textile-design-service/textile-design-service";
 import DigitalMerchandisingService from "./pages/digital-merchandising-service/digital-merchandising-service";
+import NotFound from "./pages/not-found/not-found";
 
 function App() {
   const [display, setDisplay] = useState(false);
@@ -64,7 +65,6 @@ function App() {
           path="/"
           component={() => (
             <Home
-            
               st={{
                 gradient: "gradient",
                 color: "white",
@@ -193,6 +193,22 @@ function App() {
             />
           )}
         />
+
+        <Route
+          exact
+          path="/not-found"
+          component={() => (
+            <NotFound
+              st={{
+                gradient: "",
+                color: "#828282",
+                logo: logo,
+                position: "relative",
+              }}
+            />
+          )}
+        />
+
         <Route
           exact
           path="/careers"

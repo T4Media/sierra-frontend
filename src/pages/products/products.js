@@ -2,7 +2,7 @@ import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 import "./products.scss";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Redirect } from "react-router-dom";
 import axios from "axios";
 import News from "./../../components/productCarousel/productCarousel";
 import ImageViewer from "react-simple-image-viewer";
@@ -65,6 +65,7 @@ const Products = (props) => {
         }
       )
       .then(function (response) {
+        console.log(response);
         setClassNamay("fabric");
         setProducts(response.data);
 
@@ -116,6 +117,8 @@ const Products = (props) => {
 
   return spinner ? (
     <SierraLoader />
+  ) : products?.length === 0 ? (
+    <Redirect to="/not-found" />
   ) : (
     <div className={classNamay}>
       <Navbar
