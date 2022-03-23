@@ -97,13 +97,12 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
   .information-panel .logo-black {
     top: -25px;
     position: relative;
     width: 55%;
     margin-bottom: -8rem;
-}
+  }
 
   .digital-merchandising-service .merchandising-process-1 {
     top: 130px !important;
@@ -321,19 +320,18 @@
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-
   .info-panel-images .card-1 .view-first img {
     transition: all 0.2s linear;
     width: 55%;
     top: 0%;
-}
+  }
 
   .information-panel .logo-black {
     top: -25px;
     position: relative;
     width: 70%;
     margin-bottom: -10rem;
-}
+  }
 
   .digital-merchandising-service .merchandising-process-1 {
     top: 100px !important;
@@ -685,20 +683,16 @@
 
   .brouchers .broucher-card .row .sub-cat-name {
     margin-bottom: 30px;
-    font-size: 28px !important;
-    color: black;
-    font-family: "Quickpen";
-    border-bottom: 1px solid;
+    font-size: 22px !important;
     width: -moz-fit-content;
+    white-space: nowrap;
     margin-top: 22px;
     width: fit-content;
   }
 
   .brouchers .broucher-heading h1 {
-    color: black;
     text-align: center;
     margin-top: -32px;
-    font-family: "Quickpen";
     font-weight: bolder;
     margin-bottom: 109px;
   }
@@ -849,6 +843,10 @@
 }
 
 @media (max-width: 575px) {
+  .ant-input-group-wrapper {
+    width: 85% !important;
+  }
+
   .about-eff h1 {
     font-size: 30px !important;
     text-align: center;
@@ -1197,11 +1195,11 @@
   }
   .nav-bar .logo-section img {
     cursor: pointer;
-    width: 180px;
+    width: 90%;
     position: relative;
-    top: -25px;
+    top: -60px;
     z-index: 1;
-    height: 155px;
+    height: 100%;
   }
 
   .contact-page {
@@ -1248,7 +1246,7 @@
 
   form {
     background-color: #ffffff;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-items: center;
     justify-content: center;
@@ -1256,6 +1254,11 @@
     padding: 0 0px;
     height: 100%;
     text-align: center;
+    margin-top: -40px;
+
+    label {
+      display: none;
+    }
   }
   .login-form-heading {
     font-size: 20px !important;
@@ -1290,9 +1293,12 @@
     padding: 6px 8px !important;
   }
   .fabric .description {
-    height: 50rem;
-  }
+    height: 40rem;
 
+    .download-broucher {
+      margin-left: 30% !important;
+    }
+  }
   .fabric .sub-category-name {
     margin-left: 7%;
     font-size: 235%;
@@ -1374,8 +1380,8 @@
   }
   .information-panel {
     .logo-black {
-      width: 72%;
-      top: 60px;
+      width: 100%;
+      top: 0px;
     }
     .info-panel-images .card-1 .view p {
       font-family: sans-serif !important;
@@ -1422,10 +1428,10 @@
     }
 
     img {
-      top: 0px;
-      width: 190px;
-      height: 170px;
-      left: 35px;
+      top: -25px;
+      width: 100%;
+      height: 95%;
+      left: -15px !important;
     }
     .row {
       margin-left: 20px !important;
@@ -1468,7 +1474,8 @@
             }
             .mask a {
               position: relative;
-              top: -55px;
+              top: -45px;
+              font-size: 12px;
             }
           }
         }
