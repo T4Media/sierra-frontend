@@ -10,6 +10,7 @@ import { positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
+import "babel-polyfill";
 
 const options = {
   position: positions.TOP_LEFT,
