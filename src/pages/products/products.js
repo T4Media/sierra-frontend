@@ -117,7 +117,7 @@ const Products = (props) => {
 
   return spinner ? (
     <SierraLoader />
-  ) : products?.length === 0 ? (
+  ) : subCategory?.length === 0 ? (
     <Redirect to="/not-found" />
   ) : (
     <div className={classNamay}>
