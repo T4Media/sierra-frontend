@@ -11,8 +11,8 @@ const MoreOptions = () => {
           <img src={map} alt="providers" />
           <h5>Providers</h5>
           <p>
-            Find your nearest distributor for exclusive fabrics furnishing,
-            wallpapers and accessories.
+            Find your nearest distributor for Sierra Textiles, wallpapers and
+            accessories.
           </p>
         </div>
         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 shopping mt-5">

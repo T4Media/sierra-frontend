@@ -8,7 +8,7 @@ import Cookie from "cookie-universal";
 import axios from "axios";
 import { addToken } from "../../services/slices/tokenSlice";
 
-const JobOpening = () => {
+const JobOpening = (props) => {
   const [isShowApplyForm, setIsShowApplyForm] = useState(false);
   const [jobPost, setJobPost] = useState();
 
@@ -105,7 +105,60 @@ const JobOpening = () => {
             <hr />
           </div>
 
-          <table className="mt-5">
+          <div class="container contain">
+            <ul class="responsive-table">
+              <div className="for-apply" ref={ref}>
+                <ApplyForm
+                  setIsShowApplyForm={setIsShowApplyForm}
+                  token={token}
+                  jobPost={jobPost}
+                  isShowApplyForm={isShowApplyForm}
+                  closeSigninModal={closeSigninModal}
+                />
+              </div>
+              <li class="table-header">
+                <div class="col col-1">Designation</div>
+                <div class="col col-2">Location</div>
+                <div class="col col-3">Job Type</div>
+                <div class="col col-4">Apply</div>
+              </li>
+
+              {props.jobs &&
+                props.jobs.map((job) => (
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Designation">
+                      <h5> {job.job_name}</h5>
+                      <p> {job.designation_name}</p>
+                    </div>
+                    <div class="col col-2" data-label="Location">
+                      <h5>{job.area}</h5>
+                      <p>{job.country}</p>
+                    </div>
+                    <div class="col col-3" data-label="Job Type">
+                      <h5>{job.job_type}</h5>
+                    </div>
+                    <div class="col col-4" data-label="">
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          background: "#d9b473",
+                          padding: "8px 18px",
+                          fontFamily: "Raleway",
+                          borderRadius: 8,
+                          color: "white",
+                          fontWeight: 500,
+                        }}
+                        onClick={() => handleApplyForm(job.jobPost)}
+                      >
+                        Apply
+                      </span>
+                    </div>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          {/* <table className="mt-5">
             <div className="for-apply" ref={ref}>
               <ApplyForm
                 setIsShowApplyForm={setIsShowApplyForm}
@@ -115,56 +168,54 @@ const JobOpening = () => {
                 closeSigninModal={closeSigninModal}
               />
             </div>
-            {jobOpenings.map((job) => (
-              <tr>
-                <td className="job-post">
-                  <h5> {job.jobPost}</h5>
-                  <p> {job.briefDecription}</p>
-                </td>
-                <td>
-                  <h5>{job.jobLocation}</h5>
-                  <p>United States of America</p>
-                </td>
-                <td className="job-type">
-                  <span
-                    style={{
-                      background:
-                        job.jobType == "Full Time"
-                          ? "#14b1bb"
-                          : job.jobType == "Part Time"
-                          ? "#F15B65"
-                          : "#2D3E50",
-                      padding: "8px 18px",
-                      fontFamily: "Raleway",
-                      borderRadius: 8,
-                      color: "white",
-                      fontWeight: 500,
-                    }}
-                  >
-                    {job.jobType}
-                  </span>
-
-                  {!token ? (
-                    <Signin_Signup
-                      label="Apply"
+            {props.jobs &&
+              props.jobs.map((job) => (
+                <tr>
+                  <td className="job-post">
+                    <h5> {job.job_name}</h5>
+                    <p> {job.designation_name}</p>
+                  </td>
+                  <td>
+                    <h5>{job.area}</h5>
+                    <p>{job.country}</p>
+                  </td>
+                  <td className="job-type">
+                    <span
                       style={{
-                        background: "transparent",
-                        marginLeft: "0%",
-                        color: "#000000",
-                        fontSize: 15,
-                        marginTop: "5%",
+                        background: "#d9b473",
+                        padding: "8px 18px",
+                        fontFamily: "Raleway",
+                        borderRadius: 8,
+                        color: "white",
                         fontWeight: 500,
-                        border: "none",
-                        boxShadow: "none",
                       }}
-                    />
-                  ) : (
-                    <h5 onClick={() => handleApplyForm(job.jobPost)}>Apply</h5>
-                  )}
-                </td>
-              </tr>
-            ))}
-          </table>
+                    >
+                      {job.job_type}
+                    </span>
+
+                    {!token ? (
+                      <Signin_Signup
+                        label="Apply"
+                        style={{
+                          background: "transparent",
+                          marginLeft: "0%",
+                          color: "#000000",
+                          fontSize: 15,
+                          marginTop: "5%",
+                          fontWeight: 500,
+                          border: "none",
+                          boxShadow: "none",
+                        }}
+                      />
+                    ) : (
+                      <h5 onClick={() => handleApplyForm(job.jobPost)}>
+                        Apply
+                      </h5>
+                    )}
+                  </td>
+                </tr>
+              ))}
+          </table> */}
         </center>
       </div>
     </>

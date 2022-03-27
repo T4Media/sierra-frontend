@@ -78,7 +78,11 @@ const SignupForm = (props) => {
     formData.append("userID", applyFormData.userID);
 
     axios
-      .post(process.env.REACT_APP_DEVELOPMENT_LINK + "apply_job/", formData, {})
+      .post(
+        process.env.REACT_APP_AMAZON_SERVER_LINK + "apply_job/",
+        formData,
+        {}
+      )
       .then((response) => {
         props.setIsShowApplyForm(false);
         console.log(response);
@@ -185,6 +189,7 @@ const SignupForm = (props) => {
                     fontWeight: "400",
                   }}
                   type="text"
+                  placeholder="Job Post"
                   value={props.jobPost}
                   name="jobPost"
                   className="login-box mb-4"
