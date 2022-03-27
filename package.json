@@ -46,7 +46,6 @@
     "react-simple-image-slider": "^2.1.2",
     "react-simple-image-viewer": "^1.1.1",
     "react-slick": "^0.28.1",
-    "react-snap": "^1.23.0",
     "react-tinder-card": "^1.4.5",
     "react-zoom-carousel": "^1.17.0",
     "react-zoom-slider": "^0.1.0",
@@ -58,19 +57,11 @@
     "video-react": "^0.14.1",
     "web-vitals": "^1.1.2"
   },
-  "reactSnap": {
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    "puppeteerExecutablePath": "/opt/google/chrome/google-chrome"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postbuild": "react-snap"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
