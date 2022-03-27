@@ -10,6 +10,7 @@ import { positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
+import { render } from "react-snapshot";
 import "babel-polyfill";
 
 const options = {
@@ -18,7 +19,7 @@ const options = {
 };
 
 let persistor = persistStore(store);
-ReactDOM.render(
+render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <BrowserRouter>
