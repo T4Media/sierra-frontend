@@ -24,7 +24,7 @@ import Careers from "./pages/careers/careers";
 import VideoLibrary from "./pages/video-library/video-library";
 import Leadership from "./pages/leadership/leadership";
 import Facilities from "./pages/facilities/facilities";
-import SierraLoader from "./components/Loader/sierraLoader";
+// import SierraLoader from "./components/Loader/sierraLoader";
 import SourcingAndDevelopment from "./pages/sourcing-and-development/sourcing-and-development";
 import ProductionAndQuality from "./pages/production-and-quality/production-and-quality";
 import TextileDesignService from "./pages/textile-design-service/textile-design-service";
