@@ -1,7 +1,7 @@
 import logo from "../../images/logo_updated/sierra.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 import "./navbar.scss";
 import { useSelector } from "react-redux";
 import AdminControls from "./adminControl";
@@ -87,7 +87,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <div
         className={"nav-bar container-fluid " + props.st.gradient}
         style={{ position: props.st.position }}
@@ -116,11 +116,11 @@ const Navbar = (props) => {
                       {subCategories &&
                         subCategories.map((s, i) =>
                           i <= 5 && s.mainCategory._id === m._id ? (
-                            <>
+                            <React.Fragment>
                               <Link to={s.subCategory_slug}>
                                 <li>{s.subCategory_name}</li>
                               </Link>
-                            </>
+                            </React.Fragment>
                           ) : (
                             ""
                           )
@@ -133,9 +133,7 @@ const Navbar = (props) => {
                             <Link to={s.subCategory_slug}>
                               <li>{s.subCategory_name}</li>
                             </Link>
-                          ) : (
-                            <></>
-                          )
+                          ) : null
                         )}
                     </ul>
                   </li>
@@ -148,11 +146,11 @@ const Navbar = (props) => {
                       {subCategories &&
                         subCategories.map((s, i) =>
                           s.mainCategory._id === m._id ? (
-                            <>
+                            <React.Fragment>
                               <Link to={s.subCategory_slug}>
                                 <li>{s.subCategory_name}</li>
                               </Link>
-                            </>
+                            </React.Fragment>
                           ) : (
                             ""
                           )
@@ -363,7 +361,7 @@ const Navbar = (props) => {
           />
         </div> */}
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

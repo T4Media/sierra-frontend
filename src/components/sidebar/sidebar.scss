@@ -132,4 +132,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: gainsboro;
   line-height: 28px;
   font-family: "Noah Grotesque Regular";
+  div {
+    a {
+      color: gainsboro !important;
+    }
+  }
 }
