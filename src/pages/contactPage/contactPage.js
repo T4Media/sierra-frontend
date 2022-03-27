@@ -42,21 +42,23 @@ const ContactPage = (props) => {
           <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <MdLocationOn />
             <h5 className="mt-4">OUR MAIN OFFICE</h5>
-            <p className="mt-3"> B-75/280, Street # 3, Sector “A”, Kashmir Colony, Karachi</p>
+            <p className="mt-3">
+              B-75/280, Street # 3, Sector “A”, Kashmir Colony, Karachi
+            </p>
           </div>
           <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <FaPhone />
             <h5 className="mt-4">PHONE NUMBER</h5>
             <p className="mt-3">
-            021-35393334
+              021-35393334
               <br /> 021-35316924
             </p>
           </div>
-         
+
           <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <FaMailBulk />
             <h5 className="mt-4">MAIL</h5>
-            <p className="mt-3">sales@sierratextiles.com.pkjob</p>
+            <p className="mt-3">sales@sierratextiles.com.pk</p>
           </div>
         </div>
         <hr

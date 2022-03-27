@@ -42,9 +42,15 @@ const Footer = () => {
           </ul>
           <ul className="mt-5">
             <label>COMPANY</label>
-            <li>About Sierra Textiles</li>
-            <li>Contact Us</li>
-            <li>Careers</li>
+            <li>
+              <Link to="/about">About Sierra Textiles</Link>
+            </li>
+            <li>
+              <Link to="/contact_us"> Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/careers">Careers</Link>
+            </li>
           </ul>
         </div>
 
