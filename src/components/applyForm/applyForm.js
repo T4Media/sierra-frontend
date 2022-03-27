@@ -189,6 +189,7 @@ const SignupForm = (props) => {
                     fontWeight: "400",
                   }}
                   type="text"
+                  placeholder="Job Post"
                   value={props.jobPost}
                   name="jobPost"
                   className="login-box mb-4"
