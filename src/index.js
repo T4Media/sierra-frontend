@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -10,7 +9,7 @@ import { positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import "babel-polyfill";
+import { hydrate, render } from "react-dom";
 
 const options = {
   position: positions.TOP_LEFT,
@@ -18,18 +17,35 @@ const options = {
 };
 
 let persistor = persistStore(store);
-ReactDOM.render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter>
-        <AlertProvider template={AlertTemplate} {...options}>
-          <App />
-        </AlertProvider>
-      </BrowserRouter>
-    </PersistGate>
-  </Provider>,
-  document.getElementById("root")
-);
+const rootElement = document.getElementById("root");
+
+if (rootElement.hasChildNodes()) {
+  hydrate(
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <AlertProvider template={AlertTemplate} {...options}>
+            <App />
+          </AlertProvider>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>,
+    rootElement
+  );
+} else {
+  render(
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <AlertProvider template={AlertTemplate} {...options}>
+            <App />
+          </AlertProvider>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>,
+    rootElement
+  );
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
