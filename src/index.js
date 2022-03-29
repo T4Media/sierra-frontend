@@ -9,7 +9,7 @@ import { positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import { hydrate, render } from "react-dom";
+import ReactDOM from "react-dom";
 
 const options = {
   position: positions.TOP_LEFT,
@@ -17,35 +17,18 @@ const options = {
 };
 
 let persistor = persistStore(store);
-const rootElement = document.getElementById("root");
-
-if (rootElement.hasChildNodes()) {
-  hydrate(
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
-          <AlertProvider template={AlertTemplate} {...options}>
-            <App />
-          </AlertProvider>
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>,
-    rootElement
-  );
-} else {
-  render(
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
-          <AlertProvider template={AlertTemplate} {...options}>
-            <App />
-          </AlertProvider>
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>,
-    rootElement
-  );
-}
+ReactDOM.render(
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <BrowserRouter>
+        <AlertProvider template={AlertTemplate} {...options}>
+          <App />
+        </AlertProvider>
+      </BrowserRouter>
+    </PersistGate>
+  </Provider>,
+  document.getElementById("root")
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
