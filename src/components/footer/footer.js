@@ -128,7 +128,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>
-          © 2022 Sierra Textile | B-75/280, Sector A, Street # 3, Kashmir
+          © 2022 Sierra Textiles | B-75/280, Sector A, Street # 3, Kashmir
           Colony, Karachi, Sindh, Pakistan.
         </p>
 

@@ -61,7 +61,7 @@ const Home = (props) => {
         <title>Sierra Textiles - Home</title>
         <meta
           name="description"
-          content="Sierra Textile and Fabrics has become the manifestation of a multigenerational brand in Pakistan that caters a diverse audience in accordance with the ever-changing globalized ecosystem. It has been credited for its orthodox and indigenous designs woven to perfection by our cosmopolitan design crew. The artistry mastered by our designers is imprinted in our fabric materials rich with original color palette. Sierra Textile and Fabrics has established its foothold within the design industry as a trailblazing entity that is geared to spearhead clothing style and aesthetic to its pinnacle."
+          content="Sierra Textiles and Fabrics has become the manifestation of a multigenerational brand in Pakistan that caters a diverse audience in accordance with the ever-changing globalized ecosystem. It has been credited for its orthodox and indigenous designs woven to perfection by our cosmopolitan design crew. The artistry mastered by our designers is imprinted in our fabric materials rich with original color palette. Sierra Textiles and Fabrics has established its foothold within the design industry as a trailblazing entity that is geared to spearhead clothing style and aesthetic to its pinnacle."
         />
         <meta
           name="keywords"
