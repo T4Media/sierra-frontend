@@ -36,6 +36,7 @@ function App() {
   return (
     <div className="App">
       <Sideba display={display} closeRightMenu={closeRightMenu} />
+
       <Routes
         display={display}
         openRightMenu={openRightMenu}
