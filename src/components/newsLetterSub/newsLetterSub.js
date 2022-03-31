@@ -9,8 +9,8 @@ const NewsLetterSub = () => {
       <p>
         Discover the latest news, from new product launches and events, to
         inspiring updates.
-        <br /> All information will be used by The Romo Group only and will not
-        be passed on to third parties.
+        <br /> All information will be used by The Sierra Group only and will
+        not be passed on to third parties.
       </p>
 
       <center>

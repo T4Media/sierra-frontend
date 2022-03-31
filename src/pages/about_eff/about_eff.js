@@ -43,7 +43,7 @@ const AboutEFF = (props) => {
     <>
       <Helmet>
         <title>Sierra Textiles - About</title>
-        <meta name="description" content={aboutData.para1} />
+        <meta name="description" content={aboutData?.para1} />
         <meta
           name="keywords"
           content="About Sierra, Textiles, Fabrics, Design"
