@@ -839,6 +839,9 @@
 }
 
 @media (max-width: 575px) {
+  .query-form {
+    text-align: -webkit-center;
+  }
   .container-changed span {
     top: 0 !important;
     font-size: 12px;
@@ -866,7 +869,7 @@
 
   .about-eff h1 {
     font-size: 30px !important;
-    text-align: center;
+    text-align: center !important;
   }
 
   .digital-merchandising-service .merchandising-process-1 {
@@ -1201,22 +1204,29 @@
   }
   .nav-bar .admin-controls {
     position: absolute !important;
-    top: 37px;
-    right: 5px;
+    top: 60px !important;
+    right: 12px !important;
+    ul {
+      li {
+        svg {
+          color: #d3a656 !important;
+        }
+      }
+    }
   }
   .bm-burger-button {
     width: 30px;
     height: 24px;
-    left: 10px;
-    top: 40px;
+    left: 15px;
+    top: 65px;
   }
   .nav-bar .logo-section img {
     cursor: pointer;
     width: 90% !important;
     position: relative;
-    top: -60px;
-    z-index: 0;
-    height: 100%;
+    top: -60px !important;
+    z-index: 0 !important;
+    height: 100% !important;
   }
 
   .contact-page {
@@ -1311,7 +1321,7 @@
     padding: 6px 8px !important;
   }
   .fabric .description {
-    height: 40rem;
+    height: 48rem !important;
 
     .download-broucher {
       margin-left: 30% !important;
@@ -1335,7 +1345,7 @@
     font-size: 45px;
   }
   .fabric .image img {
-    height: 20rem;
+    height: 20rem !important;
   }
   .swatch-review .row div ul {
     margin-top: 165% !important;
@@ -1398,7 +1408,7 @@
   }
   .information-panel {
     .logo-black {
-      width: 100%;
+      width: 100% !important;
       top: 0px;
     }
     .info-panel-images .card-1 .view p {
@@ -1419,10 +1429,9 @@
       ul {
         line-height: 2rem;
         text-align: center;
-        display: grid;
+        display: grid !important;
         margin-bottom: 18px !important;
         position: relative;
-        left: -20px;
 
         li {
           margin: 0px 25px 0px 0px !important;

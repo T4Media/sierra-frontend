@@ -89,7 +89,7 @@ const ContactPage = (props) => {
 
         <div className="container form-map">
           <div className="row">
-            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 query-form">
               <h3>GET A FREE CASE EVALUATION TODAY!</h3>
               <h5>AVAILABLE 24 HOURS A DAY!</h5>
               <div className="form-contact-us">
