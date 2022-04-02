@@ -45,6 +45,10 @@ const Careers = (props) => {
           name="keywords"
           content="BENEFITS OF BEING SIERRA EMPLOYEE, Sierra Jobs, jobs, careers, opportunity, full time, designation, Sierra textiels jobs"
         />
+        <link
+          rel="canonical"
+          href="https://www.sierratextiles.com.pk/careers"
+        />
       </Helmet>
       <div className={classNamay}>
         <Navbar

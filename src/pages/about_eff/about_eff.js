@@ -46,8 +46,10 @@ const AboutEFF = (props) => {
         <meta name="description" content={aboutData?.para1} />
         <meta
           name="keywords"
-          content="About Sierra, Textiles, Fabrics, Design"
+          content="About Sierra, Textiles, Fabri
+          cs, Design"
         />
+        <link rel="canonical" href="https://www.sierratextiles.com.pk/about" />
       </Helmet>
       <div className={classNamay}>
         <Navbar

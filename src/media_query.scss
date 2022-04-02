@@ -65,16 +65,16 @@
     }
 
     .ant-input-group-wrapper {
-      margin-left: 90px;
+      margin-left: 90px !important;
       width: 75% !important;
       position: relative;
     }
 
     img {
-      left: 7%;
-      top: -40px;
+      left: 7% !important;
+      top: -40px !important;
       position: relative;
-      width: 28rem;
+      width: 28rem !important;
     }
     .row ul {
       margin: 30px 0px !important;
@@ -96,8 +96,8 @@
   .information-panel .logo-black {
     top: -25px;
     position: relative;
-    width: 55%;
-    margin-bottom: -8rem;
+    width: 55% !important;
+    margin-bottom: -8rem !important;
   }
 
   .digital-merchandising-service .merchandising-process-1 {
@@ -314,6 +314,11 @@
   .bg-1 {
     display: none !important;
   }
+  .newsletter-subscription {
+    .ant-input-group-wrapper {
+      width: 65% !important;
+    }
+  }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .info-panel-images .card-1 .view-first img {
@@ -323,10 +328,10 @@
   }
 
   .information-panel .logo-black {
-    top: -25px;
+    top: -25px !important;
     position: relative;
-    width: 70%;
-    margin-bottom: -10rem;
+    width: 70% !important;
+    margin-bottom: -10rem !important;
   }
 
   .digital-merchandising-service .merchandising-process-1 {
