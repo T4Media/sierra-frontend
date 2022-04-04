@@ -82,7 +82,7 @@ const Routes = ({
             />
           )}
         />
-        <Route
+        {/* <Route
           exact
           path="/leadership"
           component={() => (
@@ -98,8 +98,8 @@ const Routes = ({
               display={display}
             />
           )}
-        />
-        <Route
+        /> */}
+        {/* <Route
           exact
           path="/facilities"
           component={() => (
@@ -115,7 +115,7 @@ const Routes = ({
               display={display}
             />
           )}
-        />
+        /> */}
         <Route
           exact
           path="/video-library"
@@ -253,7 +253,7 @@ const Routes = ({
             />
           )}
         />
-        <Route
+        {/* <Route
           exact
           path="/:product_name/:type"
           component={() => (
@@ -270,7 +270,7 @@ const Routes = ({
               selectedProd={selectedProd}
             />
           )}
-        />
+        /> */}
       </Switch>
     </div>
   );
