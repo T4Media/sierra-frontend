@@ -15,7 +15,6 @@ import logo from "./../images/logo_updated/eff_logos2.png";
 import Brouchers from "./../pages/brouchers/brouchers";
 import AboutEFF from "./../pages/about_eff/about_eff";
 import Home from "./../pages/home/home";
-import Blog from "./../pages/blog/blog";
 import SpecificProducts from "./../pages/specificProducts/specificProducts";
 import Products from "./../pages/products/products";
 import { Route, Switch } from "react-router-dom";
@@ -48,23 +47,7 @@ const Routes = ({
             />
           )}
         />
-        <Route
-          exact
-          path="/blogs"
-          component={() => (
-            <Blog
-              st={{
-                gradient: "",
-                color: "#828282",
-                logo: logo,
-                position: "relative",
-              }}
-              openRightMenu={openRightMenu}
-              closeRightMenu={closeRightMenu}
-              display={display}
-            />
-          )}
-        />
+
         <Route
           exact
           path="/brouchers"
