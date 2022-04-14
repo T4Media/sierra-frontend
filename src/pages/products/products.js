@@ -132,7 +132,7 @@ const Products = (props) => {
     <Redirect to="/not-found" />
   ) : (
     <>
-      {/* <Helmet>
+      <Helmet>
         <title>Sierra Textiles - Products</title>
         <meta
           name="description"
@@ -142,7 +142,7 @@ const Products = (props) => {
           name="keywords"
           content={subCategory?.subCategory_name + "," + getString()}
         />
-      </Helmet> */}
+      </Helmet>
       <div className={classNamay}>
         <Navbar
           token={token}
