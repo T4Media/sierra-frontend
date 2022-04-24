@@ -7,15 +7,39 @@ import Footer from "./../../components/footer/footer";
 import HorseLoader from "../../components/Loader/horseLoader";
 import SierraLoader from "./../../components/Loader/sierraLoader";
 import { Helmet } from "react-helmet";
+import axios from "axios";
+import Joi from "joi-browser";
 const ContactPage = (props) => {
   const [classNamay, setClassNamay] = useState("contact-page");
-  const [spinner, setSpinner] = useState(true);
+  const [spinner, setSpinner] = useState(false);
+  const [contactData, setContactData] = useState(null);
+  const [error, setError] = useState();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  var SignUpFormSchema = {
+    name: Joi.string().min(3).max(20).required().label("Name"),
+    email: Joi.string()
+      .email({ tlds: { allow: false } })
+      .required()
+      .label("Email"),
+    message: Joi.string().max(300).required().label("Message"),
+  };
 
   useEffect(() => {
-    setTimeout(() => {
-      setSpinner(false);
-    }, 1000);
-  });
+    setSpinner(true);
+    axios
+      .get(`${process.env.REACT_APP_AMAZON_SERVER_LINK}contact/`)
+      .then((response) => {
+        setContactData(response.data);
+        console.log(response.data);
+        setSpinner(false);
+      });
+  }, []);
 
   const makeBlur = () => {
     setClassNamay("contact-page blur");
@@ -23,6 +47,38 @@ const ContactPage = (props) => {
 
   const removeBlur = () => {
     setClassNamay("contact-page");
+  };
+
+  const handleForm = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const submitContactForm = (e) => {
+    e.preventDefault();
+
+    const result = Joi.validate(formData, SignUpFormSchema);
+    if (result.error) {
+      setError(result.error.details[0].message);
+    } else {
+      setError("");
+
+      axios
+        .post(
+          process.env.REACT_APP_AMAZON_SERVER_LINK +
+            "contact/send-message-to-email",
+          formData
+        )
+        .then((response) => {
+          alert.success("Your Message has been sent!");
+          setFormData({
+            first_name: "",
+            email: "",
+            message: "",
+          });
+        })
+        .catch((error) => setError(error.response.data));
+    }
+    console.log(formData);
   };
 
   return spinner ? (
@@ -58,23 +114,21 @@ const ContactPage = (props) => {
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <MdLocationOn />
               <h5 className="mt-4">OUR MAIN OFFICE</h5>
-              <p className="mt-3">
-                B-75/280, Street # 3, Sector “A”, Kashmir Colony, Karachi
-              </p>
+              <p className="mt-3">{contactData?.address}</p>
             </div>
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <FaPhone />
               <h5 className="mt-4">PHONE NUMBER</h5>
               <p className="mt-3">
-                021-35393334
-                <br /> 021-35316924
+                {contactData?.phone_1}
+                <br /> {contactData?.phone_2}
               </p>
             </div>
 
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <FaMailBulk />
               <h5 className="mt-4">MAIL</h5>
-              <p className="mt-3">sales@sierratextiles.com.pk</p>
+              <p className="mt-3">{contactData?.email}</p>
             </div>
           </div>
           <hr
@@ -95,35 +149,39 @@ const ContactPage = (props) => {
               <div className="form-contact-us">
                 <input
                   name="name"
-                  value=""
+                  value={formData.name}
                   type="text"
                   placeholder="Enter your name."
+                  onChange={handleForm}
                 />
                 <input
                   name="email"
-                  value=""
+                  value={formData.email}
                   type="text"
                   placeholder="Enter valid email address"
+                  onChange={handleForm}
                 />
 
                 <textarea
                   className="mt-2"
                   name="message"
-                  value=""
+                  value={formData.message}
                   type="text"
                   placeholder="Enter your message here.."
+                  onChange={handleForm}
                 />
+                <p className="mt-3">{error}</p>
               </div>
 
               <button
-                className="mt-4"
                 style={{
-                  padding: "10px 30px",
+                  padding: "5px 16px",
                   border: "none",
                   borderRadius: 8,
                   color: "white",
                   background: "#d3a657e3",
                 }}
+                onClick={submitContactForm}
               >
                 Submit{" "}
               </button>
